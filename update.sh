@@ -17,9 +17,9 @@ for version in "${versions[@]}"; do
 		sed '
 			s/%%BITCOIN_VERSION%%/'"$version"'/g;
 		' Dockerfile.template > "$version/Dockerfile"
-		if [ ! -s "$major" ] || [ "$(readlink $major | cut -d'.' -f3)" -lt "$minor" ]; then
-			rm -f $major
-			ln -s $version $major
+		if [ ! -s "$major/Dockerfile" ] || [ "$(grep "ENV BITCOIN_VERSION" "$major/Dockerfile" | cut -d'.' -f3)" -lt "$minor" ]; then
+			rm -rf $major
+			cp -R $version $major
 		fi
 	)
 done
