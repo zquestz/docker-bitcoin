@@ -12,7 +12,7 @@ if [ "$1" = 'bitcoin-cli' -o "$1" = 'bitcoin-tx' -o "$1" = 'bitcoind' -o "$1" = 
 		EOF
 	fi
 
-	chown -R bitcoin:bitcoin "$BITCOIN_DATA"
+	chown -R bitcoin "$BITCOIN_DATA"
 	exec gosu bitcoin "$@"
 fi
 
