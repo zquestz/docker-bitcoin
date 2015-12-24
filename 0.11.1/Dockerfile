@@ -3,7 +3,7 @@ FROM debian:jessie
 RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
 ENV BITCOIN_VERSION 0.11.1
-ENV BITCOIN_URL https://bitcoin.org/bin/bitcoin-core-$BITCOIN_VERSION/bitcoin-$BITCOIN_VERSION-linux64.tar.gz
+ENV BITCOIN_URL https://bitcoin.org/bin/bitcoin-core-0.11.1/bitcoin-0.11.1-linux64.tar.gz
 ENV BITCOIN_ASC_URL https://bitcoin.org/bin/bitcoin-core-$BITCOIN_VERSION/SHA256SUMS.asc
 
 RUN set -ex \
@@ -20,11 +20,12 @@ RUN set -ex \
 	&& chmod +x /usr/local/bin/gosu \
 
 	# install bitcoin binaries
+	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
+	&& wget -qO $BITCOIN_DIST $BITCOIN_URL \
 	&& gpg --keyserver pool.sks-keyservers.net --recv-keys 01EA5486DE18A882D4C2684590C8019E36C2E964 \
-	&& wget -qO bitcoin-$BITCOIN_VERSION-linux64.tar.gz $BITCOIN_URL \
 	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
 	&& gpg --verify bitcoin.asc \
-	&& tar -xzvf bitcoin-$BITCOIN_VERSION-linux64.tar.gz -C /usr/local --strip-components=1 --exclude=*-qt \
+	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
 	&& rm bitcoin* \
 
 	# remove build dependencies
