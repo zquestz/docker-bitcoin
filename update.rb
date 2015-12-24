@@ -69,25 +69,6 @@ def update_version(bitcoin, version, file_version = nil, sha256 = nil)
   dockerfile = ERB.new(File.read("Dockerfile.erb"), nil, "-")
   result = dockerfile.result(OpenStruct.new(vars).instance_eval { binding })
   File.write(File.join(dir, "Dockerfile"), result)
-
-  major = version.match(/^\d+\.\d+/).to_s
-  major_dir = version_dir(bitcoin, major)
-  if update_major?(version, major, major_dir)
-    status "Update major version #{major_dir}"
-    run "rm -rf #{major_dir}"
-    run "cp -R #{dir} #{major_dir}"
-  end
-end
-
-# check if we need to update major version directory
-def update_major?(version, major, major_dir)
-  dockerfile = File.join(major_dir, "Dockerfile")
-  return true unless File.exist?(dockerfile)
-
-  current = File.read(dockerfile).match(/BITCOIN_VERSION\s+(.*)$/)
-  current = current[1] if current
-
-  Gem::Version.new(version) >= Gem::Version.new(current)
 end
 
 VERSIONS.each do |ver|
