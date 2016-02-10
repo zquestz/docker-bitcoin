@@ -3,8 +3,9 @@
 require "erb"
 require "ostruct"
 
-VALID_FORKS = %w(core xt)
+# fork, version, file_version, sha256
 VERSIONS = [
+  ["classic", "0.11.2.cl1", "0.11.2"],
   ["core", "0.10.3"],
   ["core", "0.11.1"],
   ["core", "0.11.2"],
@@ -30,24 +31,25 @@ end
 
 def version_dir(bitcoin, version)
   dir = version
-  dir = File.join("xt", dir) if bitcoin == "xt"
+  dir = File.join(bitcoin, dir) if bitcoin != "core"
   dir
 end
 
 # update docker files for version
 def update_version(bitcoin, version, file_version = nil, sha256 = nil)
-  unless VALID_FORKS.include?(bitcoin)
-    fail "invalid fork #{bitcoin}"
-  end
-
   file_version = version if file_version.nil?
   dir = version_dir(bitcoin, version)
   status "Update version #{dir}"
 
-  if bitcoin == "xt"
+  case bitcoin
+  when 'core'
+    url = "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-linux64.tar.gz"
+  when 'classic'
+    url = "https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v#{version}/bitcoin-#{file_version}-linux64.tar.gz"
+  when 'xt'
     url = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v#{version}/bitcoin-xt-#{file_version}-linux64.tar.gz"
   else
-    url = "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-linux64.tar.gz"
+    fail "invalid fork #{bitcoin}"
   end
 
   # check that version is valid

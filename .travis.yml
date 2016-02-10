@@ -5,6 +5,7 @@ env:
   - IMAGE=0.10.3
   - IMAGE=0.11.1
   - IMAGE=0.11.2
+  - IMAGE=classic/0.11.2.cl1
   - IMAGE=xt/0.11B
   - IMAGE=xt/0.11C
   - IMAGE=xt/0.11D
