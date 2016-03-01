@@ -13,6 +13,7 @@ VERSIONS = [
   ["xt", "0.11B", "0.11.0-B", "3c51c03e28118e4846267075b150810e35c450462ce2483639e766643ed78fe1"],
   ["xt", "0.11C", "0.11.0-C", "d879c701f500303ef807b3f49a6aa1ab021ad9e86b3f4a6f7a0bf3d5ce05e545"],
   ["xt", "0.11D", "0.11.0-D", "ba0e8d553271687bc8184a4a7070e5d350171036f13c838db49bb0aabe5c5e49"],
+  ["xt", "0.11E", "0.11.0-E", "ea172e7b4c6fe30f0ea37834c721e7e35c865fae9d88c30517bfb4a3901689bb"],
 ]
 
 # run external command and test success
