@@ -21,6 +21,7 @@ before_script:
 
 script:
   - docker build -t bitcoin .
+  - docker run -it bitcoin bitcoind --version
   - ~/official-images/test/run.sh bitcoin
 
 after_script:
