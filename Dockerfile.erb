@@ -27,7 +27,7 @@ RUN set -ex \
 
 	# install bitcoin binaries
 	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
-	&& wget -qO $BITCOIN_DIST $BITCOIN_URL \
+	&& wget -O $BITCOIN_DIST $BITCOIN_URL \
 <% if bitcoin == 'core' -%>
 	&& gpg --keyserver pool.sks-keyservers.net --recv-keys 01EA5486DE18A882D4C2684590C8019E36C2E964 \
 	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
