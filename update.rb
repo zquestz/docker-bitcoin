@@ -29,16 +29,10 @@ def status(msg)
   puts "\n==> #{msg}"
 end
 
-def version_dir(bitcoin, version)
-  dir = version
-  dir = File.join(bitcoin, dir) if bitcoin != "core"
-  dir
-end
-
 # update docker files for version
 def update_version(bitcoin, version, file_version = nil, sha256 = nil)
   file_version = version if file_version.nil?
-  dir = version_dir(bitcoin, version)
+  dir = File.join(bitcoin, version)
   status "Update version #{dir}"
 
   case bitcoin
