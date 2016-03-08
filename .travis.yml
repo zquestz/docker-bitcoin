@@ -3,6 +3,7 @@ services: docker
 
 env:
   - IMAGE=classic/0.11.2.cl1
+  - IMAGE=classic/0.12.0cl1
   - IMAGE=core/0.10.3
   - IMAGE=core/0.11.1
   - IMAGE=core/0.11.2

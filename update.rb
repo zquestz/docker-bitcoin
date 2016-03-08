@@ -6,6 +6,7 @@ require "ostruct"
 # fork, version, file_version, sha256
 VERSIONS = [
   ["classic", "0.11.2.cl1", "0.11.2"],
+  ["classic", "0.12.0cl1", "0.12.0"],
   ["core", "0.10.3"],
   ["core", "0.11.1"],
   ["core", "0.11.2"],
