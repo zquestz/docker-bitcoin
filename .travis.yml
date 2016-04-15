@@ -8,6 +8,7 @@ env:
   - IMAGE=core/0.11.1
   - IMAGE=core/0.11.2
   - IMAGE=core/0.12.0
+  - IMAGE=core/0.12.1
   - IMAGE=xt/0.11B
   - IMAGE=xt/0.11C
   - IMAGE=xt/0.11D
