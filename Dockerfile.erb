@@ -6,7 +6,8 @@ ENV BITCOIN_VERSION <%= version %>
 ENV BITCOIN_URL <%= url %>
 <% if sha256 -%>
 ENV BITCOIN_SHA256 <%= sha256 %>
-<% else -%>
+<% end -%>
+<% if asc_url -%>
 ENV BITCOIN_ASC_URL <%= asc_url %>
 <% end -%>
 
@@ -28,7 +29,8 @@ RUN set -ex \
 	&& wget -O $BITCOIN_DIST $BITCOIN_URL \
 <% if sha256 -%>
 	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
-<% else -%>
+<% end -%>
+<% if asc_url -%>
 	&& gpg --keyserver pool.sks-keyservers.net --recv-keys <%= key %> \
 	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
 	&& gpg --verify bitcoin.asc \

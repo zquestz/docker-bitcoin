@@ -4,6 +4,7 @@ RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
 ENV BITCOIN_VERSION 0.11.2.cl1
 ENV BITCOIN_URL https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.11.2.cl1/bitcoin-0.11.2-linux64.tar.gz
+ENV BITCOIN_SHA256 3f4eb95a832c205d1fe3b3f4537df667f17f3a6be61416d11597feb666bde4ca
 ENV BITCOIN_ASC_URL https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.11.2.cl1/SHA256SUMS.asc
 
 RUN set -ex \
@@ -22,6 +23,7 @@ RUN set -ex \
 	# install bitcoin binaries
 	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
 	&& wget -O $BITCOIN_DIST $BITCOIN_URL \
+	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
 	&& gpg --keyserver pool.sks-keyservers.net --recv-keys 26646D99CBAEC9B81982EF6029D9EE6B1FC730C1 \
 	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
 	&& gpg --verify bitcoin.asc \
