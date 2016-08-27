@@ -55,3 +55,8 @@ xt:
   0.11E:
     url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11E/bitcoin-xt-0.11.0-E-linux64.tar.gz
     sha256: ea172e7b4c6fe30f0ea37834c721e7e35c865fae9d88c30517bfb4a3901689bb
+  0.11F:
+    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11F/bitcoin-xt-0.11.0-F-linux64.tar.gz
+    asc_url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11F/SHA256SUMS.asc
+    key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
+    sha256: fc51558f73f2153866fc47d1ab7eebccd5c188e605f078155f2ff80290939184
