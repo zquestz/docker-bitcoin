@@ -15,7 +15,7 @@ To see the currently available versions/tags, please visit the appropriate pages
 
 **Usage**
 
-To start a bitcoind instance running the latest version (`0.12`):
+To start a bitcoind instance running the latest version (`0.13`):
 
 ```
 $ docker run --name some-bitcoin amacneil/bitcoin
