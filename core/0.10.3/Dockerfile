@@ -6,6 +6,7 @@ ENV BITCOIN_VERSION 0.10.3
 ENV BITCOIN_URL https://bitcoin.org/bin/bitcoin-core-0.10.3/bitcoin-0.10.3-linux64.tar.gz
 ENV BITCOIN_SHA256 586eb5576f71cd1ad2a42a26f67afc87deffc51d9f75348e2c7e96b1a401e23d
 ENV BITCOIN_ASC_URL https://bitcoin.org/bin/bitcoin-core-0.10.3/SHA256SUMS.asc
+ENV BITCOIN_PGP_KEY 01EA5486DE18A882D4C2684590C8019E36C2E964
 
 RUN set -ex \
 	&& apt-get update \
@@ -24,7 +25,7 @@ RUN set -ex \
 	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
 	&& wget -O $BITCOIN_DIST $BITCOIN_URL \
 	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
-	&& gpg --keyserver pool.sks-keyservers.net --recv-keys 01EA5486DE18A882D4C2684590C8019E36C2E964 \
+	&& gpg --keyserver pool.sks-keyservers.net --recv-keys $BITCOIN_PGP_KEY \
 	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
 	&& gpg --verify bitcoin.asc \
 	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \

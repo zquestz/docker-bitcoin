@@ -6,6 +6,7 @@ ENV BITCOIN_VERSION 0.12.0cl1
 ENV BITCOIN_URL https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.12.0cl1/bitcoin-0.12.0-linux64.tar.gz
 ENV BITCOIN_SHA256 e69614c073ee981168127614811a685f32108471a80d22a145b9e9a0def7d278
 ENV BITCOIN_ASC_URL https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.12.0cl1/SHA256SUMS.asc
+ENV BITCOIN_PGP_KEY 26646D99CBAEC9B81982EF6029D9EE6B1FC730C1
 
 RUN set -ex \
 	&& apt-get update \
@@ -24,7 +25,7 @@ RUN set -ex \
 	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
 	&& wget -O $BITCOIN_DIST $BITCOIN_URL \
 	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
-	&& gpg --keyserver pool.sks-keyservers.net --recv-keys 26646D99CBAEC9B81982EF6029D9EE6B1FC730C1 \
+	&& gpg --keyserver pool.sks-keyservers.net --recv-keys $BITCOIN_PGP_KEY \
 	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
 	&& gpg --verify bitcoin.asc \
 	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
