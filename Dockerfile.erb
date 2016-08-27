@@ -4,9 +4,7 @@ RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
 ENV BITCOIN_VERSION <%= version %>
 ENV BITCOIN_URL <%= url %>
-<% if sha256 -%>
 ENV BITCOIN_SHA256 <%= sha256 %>
-<% end -%>
 <% if asc_url -%>
 ENV BITCOIN_ASC_URL <%= asc_url %>
 ENV BITCOIN_PGP_KEY <%= key %>
@@ -28,9 +26,7 @@ RUN set -ex \
 	# install bitcoin binaries
 	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
 	&& wget -O $BITCOIN_DIST $BITCOIN_URL \
-<% if sha256 -%>
 	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
-<% end -%>
 <% if asc_url -%>
 	&& gpg --keyserver pool.sks-keyservers.net --recv-keys $BITCOIN_PGP_KEY \
 	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
