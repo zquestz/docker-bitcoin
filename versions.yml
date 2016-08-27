@@ -1,22 +1,38 @@
 core:
   0.10.3:
     url: https://bitcoin.org/bin/bitcoin-core-0.10.3/bitcoin-0.10.3-linux64.tar.gz
+    asc_url: https://bitcoin.org/bin/bitcoin-core-0.10.3/SHA256SUMS.asc
+    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
   0.11.1:
     url: https://bitcoin.org/bin/bitcoin-core-0.11.1/bitcoin-0.11.1-linux64.tar.gz
+    asc_url: https://bitcoin.org/bin/bitcoin-core-0.11.1/SHA256SUMS.asc
+    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
   0.11.2:
     url: https://bitcoin.org/bin/bitcoin-core-0.11.2/bitcoin-0.11.2-linux64.tar.gz
+    asc_url: https://bitcoin.org/bin/bitcoin-core-0.11.2/SHA256SUMS.asc
+    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
   0.12.0:
     url: https://bitcoin.org/bin/bitcoin-core-0.12.0/bitcoin-0.12.0-linux64.tar.gz
+    asc_url: https://bitcoin.org/bin/bitcoin-core-0.12.0/SHA256SUMS.asc
+    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
   0.12.1:
     url: https://bitcoin.org/bin/bitcoin-core-0.12.1/bitcoin-0.12.1-linux64.tar.gz
+    asc_url: https://bitcoin.org/bin/bitcoin-core-0.12.1/SHA256SUMS.asc
+    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
   0.13.0:
     url: https://bitcoin.org/bin/bitcoin-core-0.13.0/bitcoin-0.13.0-x86_64-linux-gnu.tar.gz
+    asc_url: https://bitcoin.org/bin/bitcoin-core-0.13.0/SHA256SUMS.asc
+    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
 
 classic:
   0.11.2.cl1:
     url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.11.2.cl1/bitcoin-0.11.2-linux64.tar.gz
+    asc_url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.11.2.cl1/SHA256SUMS.asc
+    key: 26646D99CBAEC9B81982EF6029D9EE6B1FC730C1
   0.12.0cl1:
     url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.12.0cl1/bitcoin-0.12.0-linux64.tar.gz
+    asc_url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.12.0cl1/SHA256SUMS.asc
+    key: 26646D99CBAEC9B81982EF6029D9EE6B1FC730C1
 
 xt:
   0.11B:

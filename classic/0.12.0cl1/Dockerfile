@@ -4,7 +4,7 @@ RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
 ENV BITCOIN_VERSION 0.12.0cl1
 ENV BITCOIN_URL https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.12.0cl1/bitcoin-0.12.0-linux64.tar.gz
-ENV BITCOIN_ASC_URL https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v$BITCOIN_VERSION/SHA256SUMS.asc
+ENV BITCOIN_ASC_URL https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.12.0cl1/SHA256SUMS.asc
 
 RUN set -ex \
 	&& apt-get update \

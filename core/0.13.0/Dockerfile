@@ -4,7 +4,7 @@ RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
 ENV BITCOIN_VERSION 0.13.0
 ENV BITCOIN_URL https://bitcoin.org/bin/bitcoin-core-0.13.0/bitcoin-0.13.0-x86_64-linux-gnu.tar.gz
-ENV BITCOIN_ASC_URL https://bitcoin.org/bin/bitcoin-core-$BITCOIN_VERSION/SHA256SUMS.asc
+ENV BITCOIN_ASC_URL https://bitcoin.org/bin/bitcoin-core-0.13.0/SHA256SUMS.asc
 
 RUN set -ex \
 	&& apt-get update \

@@ -7,12 +7,8 @@ require "yaml"
 # run external command and test success
 def run(cmd)
   puts "#{cmd}"
-  out = `#{cmd}`
-
-  if !$?.success?
-    print out
-    exit 1
-  end
+  success = system(cmd)
+  exit $?.exitstatus unless success
 end
 
 def status(msg)
@@ -20,7 +16,7 @@ def status(msg)
 end
 
 # update docker files for version
-def update_version(branch, version, opts = {})
+def update_version(branch, version, opts={})
   dir = File.join(branch, version)
   status "Update version #{dir}"
 
@@ -30,7 +26,6 @@ def update_version(branch, version, opts = {})
   run "cp docker-entrypoint.sh #{dir}"
 
   # render Dockerfile
-  opts[:bitcoin] = branch
   opts[:version] = version
 
   dockerfile = ERB.new(File.read("Dockerfile.erb"), nil, "-")
@@ -38,8 +33,14 @@ def update_version(branch, version, opts = {})
   File.write(File.join(dir, "Dockerfile"), result)
 end
 
-YAML.load_file('versions.yml').each do |branch, versions|
-  versions.each do |version, opts|
-    update_version(branch, version, opts)
+def load_versions
+  YAML.load_file('versions.yml')
+end
+
+if __FILE__ == $0
+  load_versions.each do |branch, versions|
+    versions.each do |version, opts|
+      update_version(branch, version, opts)
+    end
   end
 end
