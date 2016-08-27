@@ -2,21 +2,7 @@
 
 require "erb"
 require "ostruct"
-
-# fork, version, file_version, sha256
-VERSIONS = [
-  ["classic", "0.11.2.cl1", "0.11.2"],
-  ["classic", "0.12.0cl1", "0.12.0"],
-  ["core", "0.10.3"],
-  ["core", "0.11.1"],
-  ["core", "0.11.2"],
-  ["core", "0.12.0"],
-  ["core", "0.12.1"],
-  ["xt", "0.11B", "0.11.0-B", "3c51c03e28118e4846267075b150810e35c450462ce2483639e766643ed78fe1"],
-  ["xt", "0.11C", "0.11.0-C", "d879c701f500303ef807b3f49a6aa1ab021ad9e86b3f4a6f7a0bf3d5ce05e545"],
-  ["xt", "0.11D", "0.11.0-D", "ba0e8d553271687bc8184a4a7070e5d350171036f13c838db49bb0aabe5c5e49"],
-  ["xt", "0.11E", "0.11.0-E", "ea172e7b4c6fe30f0ea37834c721e7e35c865fae9d88c30517bfb4a3901689bb"],
-]
+require "yaml"
 
 # run external command and test success
 def run(cmd)
@@ -34,24 +20,9 @@ def status(msg)
 end
 
 # update docker files for version
-def update_version(bitcoin, version, file_version = nil, sha256 = nil)
-  file_version = version if file_version.nil?
-  dir = File.join(bitcoin, version)
+def update_version(branch, version, opts = {})
+  dir = File.join(branch, version)
   status "Update version #{dir}"
-
-  case bitcoin
-  when 'core'
-    url = "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-linux64.tar.gz"
-  when 'classic'
-    url = "https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v#{version}/bitcoin-#{file_version}-linux64.tar.gz"
-  when 'xt'
-    url = "https://github.com/bitcoinxt/bitcoinxt/releases/download/v#{version}/bitcoin-xt-#{file_version}-linux64.tar.gz"
-  else
-    fail "invalid fork #{bitcoin}"
-  end
-
-  # check that version is valid
-  # run "curl -fsSLI #{url}"
 
   # initialize directory
   run "rm -rf #{dir}"
@@ -59,18 +30,16 @@ def update_version(bitcoin, version, file_version = nil, sha256 = nil)
   run "cp docker-entrypoint.sh #{dir}"
 
   # render Dockerfile
-  vars = {
-    bitcoin: bitcoin,
-    version: version,
-    url: url,
-    sha256: sha256,
-  }
+  opts[:bitcoin] = branch
+  opts[:version] = version
 
   dockerfile = ERB.new(File.read("Dockerfile.erb"), nil, "-")
-  result = dockerfile.result(OpenStruct.new(vars).instance_eval { binding })
+  result = dockerfile.result(OpenStruct.new(opts).instance_eval { binding })
   File.write(File.join(dir, "Dockerfile"), result)
 end
 
-VERSIONS.each do |ver|
-  update_version(*ver)
+YAML.load_file('versions.yml').each do |branch, versions|
+  versions.each do |version, opts|
+    update_version(branch, version, opts)
+  end
 end

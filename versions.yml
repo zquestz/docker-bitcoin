@@ -1,0 +1,31 @@
+core:
+  0.10.3:
+    url: https://bitcoin.org/bin/bitcoin-core-0.10.3/bitcoin-0.10.3-linux64.tar.gz
+  0.11.1:
+    url: https://bitcoin.org/bin/bitcoin-core-0.11.1/bitcoin-0.11.1-linux64.tar.gz
+  0.11.2:
+    url: https://bitcoin.org/bin/bitcoin-core-0.11.2/bitcoin-0.11.2-linux64.tar.gz
+  0.12.0:
+    url: https://bitcoin.org/bin/bitcoin-core-0.12.0/bitcoin-0.12.0-linux64.tar.gz
+  0.12.1:
+    url: https://bitcoin.org/bin/bitcoin-core-0.12.1/bitcoin-0.12.1-linux64.tar.gz
+
+classic:
+  0.11.2.cl1:
+    url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.11.2.cl1/bitcoin-0.11.2-linux64.tar.gz
+  0.12.0cl1:
+    url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.12.0cl1/bitcoin-0.12.0-linux64.tar.gz
+
+xt:
+  0.11B:
+    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11B/bitcoin-xt-0.11.0-B-linux64.tar.gz
+    sha256: 3c51c03e28118e4846267075b150810e35c450462ce2483639e766643ed78fe1
+  0.11C:
+    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11C/bitcoin-xt-0.11.0-C-linux64.tar.gz
+    sha256: d879c701f500303ef807b3f49a6aa1ab021ad9e86b3f4a6f7a0bf3d5ce05e545
+  0.11D:
+    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11D/bitcoin-xt-0.11.0-D-linux64.tar.gz
+    sha256: ba0e8d553271687bc8184a4a7070e5d350171036f13c838db49bb0aabe5c5e49
+  0.11E:
+    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11E/bitcoin-xt-0.11.0-E-linux64.tar.gz
+    sha256: ea172e7b4c6fe30f0ea37834c721e7e35c865fae9d88c30517bfb4a3901689bb
