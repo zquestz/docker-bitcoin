@@ -2,9 +2,11 @@ FROM debian:jessie
 
 RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
-ENV BITCOIN_VERSION 0.11E
-ENV BITCOIN_URL https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11E/bitcoin-xt-0.11.0-E-linux64.tar.gz
-ENV BITCOIN_SHA256 ea172e7b4c6fe30f0ea37834c721e7e35c865fae9d88c30517bfb4a3901689bb
+ENV BITCOIN_VERSION 0.11.0F
+ENV BITCOIN_URL https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11F/bitcoin-xt-0.11.0-F-linux64.tar.gz
+ENV BITCOIN_SHA256 fc51558f73f2153866fc47d1ab7eebccd5c188e605f078155f2ff80290939184
+ENV BITCOIN_ASC_URL https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11F/SHA256SUMS.asc
+ENV BITCOIN_PGP_KEY 8F6EDE3A88F86BC6F98255D7F5D993791A778012
 
 RUN set -ex \
 	&& apt-get update \
@@ -23,6 +25,9 @@ RUN set -ex \
 	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
 	&& wget -O $BITCOIN_DIST $BITCOIN_URL \
 	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
+	&& gpg --keyserver pool.sks-keyservers.net --recv-keys $BITCOIN_PGP_KEY \
+	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
+	&& gpg --verify bitcoin.asc \
 	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
 	&& rm bitcoin* \
 

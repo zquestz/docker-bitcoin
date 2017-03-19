@@ -2,9 +2,9 @@ FROM debian:jessie
 
 RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
-ENV BITCOIN_VERSION 0.11B
-ENV BITCOIN_URL https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11B/bitcoin-xt-0.11.0-B-linux64.tar.gz
-ENV BITCOIN_SHA256 3c51c03e28118e4846267075b150810e35c450462ce2483639e766643ed78fe1
+ENV BITCOIN_VERSION 0.11.0E
+ENV BITCOIN_URL https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11E/bitcoin-xt-0.11.0-E-linux64.tar.gz
+ENV BITCOIN_SHA256 ea172e7b4c6fe30f0ea37834c721e7e35c865fae9d88c30517bfb4a3901689bb
 
 RUN set -ex \
 	&& apt-get update \
