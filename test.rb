@@ -6,7 +6,7 @@ def build_image(branch, version)
   dir = File.join(branch, version)
   tag = "bitcoin-#{branch}:#{version}"
   run "docker build -t #{tag} #{dir}"
-  run "docker run --rm #{tag} sh -c 'test -n \"$(bitcoind -version | grep version)\"'"
+  run "docker run --rm #{tag} sh -c 'test -n \"$(bitcoind -version | grep \"version v#{version}\")\"'"
 end
 
 if __FILE__ == $0
