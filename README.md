@@ -12,6 +12,7 @@ To see the currently available versions/tags, please visit the appropriate pages
 * [Bitcoin Core](https://hub.docker.com/r/amacneil/bitcoin/tags/)
 * [Bitcoin Classic](https://hub.docker.com/r/amacneil/bitcoinclassic/tags/)
 * [Bitcoin XT](https://hub.docker.com/r/amacneil/bitcoinxt/tags/)
+* [Bitcoin Unlimited](https://hub.docker.com/r/amacneil/bitcoinunlimited/tags/)
 
 **Usage**
 
@@ -60,12 +61,18 @@ $ docker start some-bitcoin
 
 **Alternative Clients**
 
-Images are also provided for Bitcoin Classic and Bitcoin XT, which are separately maintained forks of the original Bitcoin Core codebase.
+Images are also provided for Bitcoin Unlimited, Bitcoin Classic, and Bitcoin XT, which are separately maintained forks of the original Bitcoin Core codebase.
 
 To run the latest version of Bitcoin Classic:
 
 ```
 $ docker run amacneil/bitcoinclassic
+```
+
+To run the latest version of Bitcoin Unlimited:
+
+```
+$ docker run amacneil/bitcoinunlimited
 ```
 
 To run the latest version of Bitcoin XT:
@@ -74,7 +81,7 @@ To run the latest version of Bitcoin XT:
 $ docker run amacneil/bitcoinxt
 ```
 
-Specific versions of Bitcoin Classic and Bitcoin XT may be run using the command line options above.
+Specific versions of these alternate clients may be run using the command line options above.
 
 **Data Volumes**
 
