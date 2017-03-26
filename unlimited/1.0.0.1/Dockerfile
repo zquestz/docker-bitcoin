@@ -3,7 +3,7 @@ FROM debian:jessie
 RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
 ENV BITCOIN_VERSION 1.0.0.1
-ENV BITCOIN_URL https://www.bitcoinunlimited.info/downloads/bitcoinUnlimited-1.0.0.1-linux64.tar.gz
+ENV BITCOIN_URL https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloads/raw/master/bitcoinUnlimited-1.0.0.1-linux64.tar.gz
 ENV BITCOIN_SHA256 cfedf1a4701cf05f8e8a9ff4da0f887bcb2b3bbdcd7631e9cfdeebb6dff01c72
 
 RUN set -ex \

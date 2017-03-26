@@ -89,23 +89,26 @@ classic:
 
 unlimited:
   0.11.2:
-    url: https://www.bitcoinunlimited.info/downloads/bitcoinUnlimited-0.11.2-linux64.tar.gz
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloads/raw/master/bitcoinUnlimited-0.11.2-linux64.tar.gz
     sha256: c6e83e5910d6b4ad852ac6d6a9ec6c92001a5070bb51d4292577174f22495355
   0.12.0:
-    url: https://www.bitcoinunlimited.info/downloads/bitcoinUnlimited-0.12.0-linux64.tar.gz
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloads/raw/master/bitcoinUnlimited-0.12.0-linux64.tar.gz
     sha256: 5831c3364fbb0dddf37b06303e2573850ba0116d57aee5710c96ee50f7499031
   0.12.1:
-    url: https://www.bitcoinunlimited.info/downloads/bitcoinUnlimited-0.12.1-linux64.tar.gz
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloads/raw/master/bitcoinUnlimited-0.12.1-linux64.tar.gz
     sha256: 34de171ac1b48b0780d68f3844c9fd2e8bfe6a7780b55e1f012067c2440ebd8a
   1.0.0.1:
-    url: https://www.bitcoinunlimited.info/downloads/bitcoinUnlimited-1.0.0.1-linux64.tar.gz
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloads/raw/master/bitcoinUnlimited-1.0.0.1-linux64.tar.gz
     sha256: cfedf1a4701cf05f8e8a9ff4da0f887bcb2b3bbdcd7631e9cfdeebb6dff01c72
   1.0.1.0:
-    url: https://www.bitcoinunlimited.info/downloads/bitcoinUnlimited-1.0.1-linux64.tar.gz
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloads/raw/master/bitcoinUnlimited-1.0.1-linux64.tar.gz
     sha256: bb604081403eefa423fb2911bf6d99258d9db655ece8c3d557f32388c06a6207
   1.0.1.1:
-    url: https://www.bitcoinunlimited.info/downloads/bitcoinUnlimited-1.0.1.1-linux64.tar.gz
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloads/raw/master/bitcoinUnlimited-1.0.1.1-linux64.tar.gz
     sha256: 68439e21ff6806af2acb64b3d4b60ef9bb47d82ba68fce98752de6cc9d1f4502
+  1.0.1.2:
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloads/raw/master/bitcoinUnlimited-1.0.1.2-linux64.tar.gz
+    sha256: 5ea1740325b2ad6bcd2c6985d1716186d2f2da54b9d9ab7a9948afa06f15d030
 
 xt:
   0.11.0B:
