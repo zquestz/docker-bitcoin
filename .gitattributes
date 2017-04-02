@@ -1,0 +1,2 @@
+secretfile filter=git-crypt diff=git-crypt
+kube/* filter=git-crypt diff=git-crypt
