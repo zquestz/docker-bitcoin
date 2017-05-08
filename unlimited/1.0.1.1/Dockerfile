@@ -2,32 +2,31 @@ FROM debian:jessie
 
 RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
-ENV BITCOIN_VERSION 1.0.1.1
-ENV BITCOIN_URL https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.1.1-linux64.tar.gz
-ENV BITCOIN_SHA256 68439e21ff6806af2acb64b3d4b60ef9bb47d82ba68fce98752de6cc9d1f4502
-
 RUN set -ex \
 	&& apt-get update \
 	&& apt-get install -y --no-install-recommends ca-certificates wget \
-	&& rm -rf /var/lib/apt/lists/* \
+	&& rm -rf /var/lib/apt/lists/*
 
-	# grab gosu for easy step-down from root
+# grab gosu for easy step-down from root
+RUN set -ex \
 	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 \
 	&& wget -qO /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/1.7/gosu-$(dpkg --print-architecture)" \
 	&& wget -qO /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/1.7/gosu-$(dpkg --print-architecture).asc" \
 	&& gpg --verify /usr/local/bin/gosu.asc \
 	&& rm /usr/local/bin/gosu.asc \
-	&& chmod +x /usr/local/bin/gosu \
+	&& chmod +x /usr/local/bin/gosu
 
-	# install bitcoin binaries
+ENV BITCOIN_VERSION 1.0.1.1
+ENV BITCOIN_URL https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.1.1-linux64.tar.gz
+ENV BITCOIN_SHA256 68439e21ff6806af2acb64b3d4b60ef9bb47d82ba68fce98752de6cc9d1f4502
+
+# install bitcoin binaries
+RUN set -ex \
 	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
-	&& wget -O $BITCOIN_DIST $BITCOIN_URL \
+	&& wget -qO $BITCOIN_DIST $BITCOIN_URL \
 	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
 	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
-	&& rm bitcoin* \
-
-	# remove build dependencies
-	&& apt-get purge -y --auto-remove wget
+	&& rm bitcoin*
 
 ENV BITCOIN_DATA /data
 RUN mkdir $BITCOIN_DATA \
