@@ -34,7 +34,9 @@ def update_version(branch, version, opts={})
 end
 
 def load_versions
-  YAML.load_file('versions.yml')
+  versions = YAML.load_file('versions.yml')
+  versions.select! { |k, v| k === ENV['BRANCH'] } if ENV['BRANCH']
+  versions
 end
 
 if __FILE__ == $0

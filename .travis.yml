@@ -2,6 +2,12 @@ language: bash
 
 services: docker
 
+env:
+  - BRANCH=classic
+  - BRANCH=core
+  - BRANCH=unlimited
+  - BRANCH=xt
+
 script:
   - make test
 
