@@ -3,6 +3,7 @@ language: bash
 services: docker
 
 env:
+  - BRANCH=btc1
   - BRANCH=classic
   - BRANCH=core
   - BRANCH=unlimited

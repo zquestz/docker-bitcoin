@@ -61,6 +61,11 @@ core:
     sha256: 668ba1ae6d54307878e1e02d396b96e0bb3829b71735cb1992910cadf861db1f
     client_version: 0.14.2.0-3a051b8
 
+btc1:
+  1.14.3:
+    url: https://github.com/btc1/bitcoin/releases/download/v1.14.3/bitcoin-1.14.3-x86_64-linux-gnu.tar.gz
+    sha256: 021e9034163a8707f2714b040dca3728a5fef05f01b8397e989e2401c8bd9752
+
 classic:
   0.11.2.cl1:
     url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v0.11.2.cl1/bitcoin-0.11.2-linux64.tar.gz

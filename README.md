@@ -7,12 +7,14 @@ Bitcoin uses peer-to-peer technology to operate with no central authority or ban
 
 This Docker image provides `bitcoin`, `bitcoin-cli` and `bitcoin-tx` applications which can be used to run and interact with a bitcoin server.
 
-To see the currently available versions/tags, please visit the appropriate pages on Docker Hub:
+Images are provided for a range of current and historic Bitcoin forks.
+To see the available versions/tags, please visit the appropriate pages on Docker Hub:
 
 * [Bitcoin Core](https://hub.docker.com/r/amacneil/bitcoin/tags/)
 * [Bitcoin Classic](https://hub.docker.com/r/amacneil/bitcoinclassic/tags/)
-* [Bitcoin XT](https://hub.docker.com/r/amacneil/bitcoinxt/tags/)
 * [Bitcoin Unlimited](https://hub.docker.com/r/amacneil/bitcoinunlimited/tags/)
+* [Bitcoin XT](https://hub.docker.com/r/amacneil/bitcoinxt/tags/)
+* [btc1 Core](https://hub.docker.com/r/amacneil/btc1/tags/)
 
 **Usage**
 
@@ -61,7 +63,13 @@ $ docker start some-bitcoin
 
 **Alternative Clients**
 
-Images are also provided for Bitcoin Unlimited, Bitcoin Classic, and Bitcoin XT, which are separately maintained forks of the original Bitcoin Core codebase.
+Images are also provided for btc1, Bitcoin Unlimited, Bitcoin Classic, and Bitcoin XT, which are separately maintained forks of the original Bitcoin Core codebase.
+
+To run the latest version of btc1 Core:
+
+```
+$ docker run amacneil/btc1
+```
 
 To run the latest version of Bitcoin Classic:
 
