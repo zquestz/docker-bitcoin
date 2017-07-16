@@ -138,3 +138,20 @@ $ docker network create bitcoin
 $ docker run -d --rm --name bitcoind -v bitcoin-data:/data --network bitcoin amacneil/bitcoin
 $ docker run --rm --network bitcoin amacneil/bitcoin bitcoin-cli -rpcconnect=bitcoind getinfo
 ```
+
+### Complete Example
+
+For a complete example of running a bitcoin node using Docker Compose, see the [Docker Compose example](/example#readme).
+
+### License
+
+Configuration files and code in this repository are distributed under the [MIT license](/LICENSE).
+
+### Contributing
+
+All files are generated from templates in the root of this repository. Please do not edit any of the generated Dockerfiles directly.
+
+* To add a new Bitcoin version, update [versions.yml](/versions.yml), then run `make update`.
+* To make a change to the Dockerfile which affects all current and historical Bitcoin versions, edit [Dockerfile.erb](/Dockerfile.erb) then run `make update`.
+
+If you would like to build and test containers for all versions (similar to what happens in CI), run `make`. If you would like to build and test all containers for a specific Bitcoin fork, run `BRANCH=core make`.
