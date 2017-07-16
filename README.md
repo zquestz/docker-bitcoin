@@ -16,7 +16,7 @@ To see the available versions/tags, please visit the appropriate pages on Docker
 * [Bitcoin XT](https://hub.docker.com/r/amacneil/bitcoinxt/tags/)
 * [btc1 Core](https://hub.docker.com/r/amacneil/btc1/tags/)
 
-**Usage**
+### Usage
 
 To start a bitcoind instance running the latest version:
 
@@ -61,7 +61,7 @@ $ docker stop bitcoind
 $ docker start bitcoind
 ```
 
-**Alternative Clients**
+### Alternative Clients
 
 Images are also provided for btc1, Bitcoin Unlimited, Bitcoin Classic, and Bitcoin XT, which are separately maintained forks of the original Bitcoin Core codebase.
 
@@ -91,7 +91,17 @@ $ docker run amacneil/bitcoinxt
 
 Specific versions of these alternate clients may be run using the command line options above.
 
-**Data Volumes**
+### Configuring Bitcoin
+
+The best method to configure the bitcoin server is to pass arguments to the `bitcoind` command. For example, to run bitcoin on the testnet:
+
+```
+$ docker run --name bitcoind-testnet amacneil/bitcoin bitcoind -testnet
+```
+
+Alternatively, you can edit the `bitcoin.conf` file which is generated in your data directory (see below).
+
+### Data Volumes
 
 By default, Docker will create ephemeral containers. That is, the blockchain data will not be persisted, and you will need to sync the blockchain from scratch each time you launch a container.
 
@@ -110,10 +120,21 @@ $ docker run -d --rm --name bitcoind -v "$PWD/data:/data" amacneil/bitcoin
 $ ls -alh ./data
 ```
 
-**Configuring Bitcoin**
+### Using bitcoin-cli
 
-The easiest method to configure the bitcoin server is to pass arguments to the `bitcoind` command. For example, to run bitcoin on the testnet:
+By default, Docker runs all containers on a private bridge network. This means that you are unable to access the RPC port (8332) necessary to run `bitcoin-cli` commands.
+
+There are several methods to run `bitclin-cli` against a running `bitcoind` container. The easiest is to simply let your `bitcoin-cli` container share networking with your `bitcoind` container:
 
 ```
-$ docker run --name bitcoin-testnet amacneil/bitcoin bitcoind -testnet
+$ docker run -d --rm --name bitcoind -v bitcoin-data:/data amacneil/bitcoin
+$ docker run --rm --network container:bitcoind amacneil/bitcoin bitcoin-cli getinfo
+```
+
+If you plan on exposing the RPC port to multiple containers (for example, if you are developing an application which communicates with the RPC port directly), you probably want to consider creating a [user-defined network](https://docs.docker.com/engine/userguide/networking/). You can then use this network for both your `bitcoind` and `bitclin-cli` containers, passing `-rpcconnect` to specify the hostname of your `bitcoind` container:
+
+```
+$ docker network create bitcoin
+$ docker run -d --rm --name bitcoind -v bitcoin-data:/data --network bitcoin amacneil/bitcoin
+$ docker run --rm --network bitcoin amacneil/bitcoin bitcoin-cli -rpcconnect=bitcoind getinfo
 ```
