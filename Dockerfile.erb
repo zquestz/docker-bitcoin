@@ -28,10 +28,12 @@ RUN set -ex \
 	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
 	&& rm bitcoin*
 
+# create data directory
 ENV BITCOIN_DATA /data
 RUN mkdir $BITCOIN_DATA \
-	&& chown bitcoin:bitcoin $BITCOIN_DATA \
-	&& ln -s $BITCOIN_DATA /home/bitcoin/.bitcoin
+	&& chown -R bitcoin:bitcoin $BITCOIN_DATA \
+	&& ln -sfn $BITCOIN_DATA /home/bitcoin/.bitcoin \
+	&& chown -h bitcoin:bitcoin /home/bitcoin/.bitcoin
 VOLUME /data
 
 COPY docker-entrypoint.sh /entrypoint.sh
