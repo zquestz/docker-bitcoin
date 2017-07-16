@@ -18,28 +18,28 @@ To see the available versions/tags, please visit the appropriate pages on Docker
 
 **Usage**
 
-To start a bitcoind instance running the latest version (`0.13`):
+To start a bitcoind instance running the latest version:
 
 ```
-$ docker run --name some-bitcoin amacneil/bitcoin
+$ docker run amacneil/bitcoin
 ```
 
 This docker image provides different tags so that you can specify the exact version of bitcoin you wish to run. For example, to run the latest minor version in the `0.11.x` series (currently `0.11.2`):
 
 ```
-$ docker run --name some-bitcoin amacneil/bitcoin:0.11
+$ docker run amacneil/bitcoin:0.11
 ```
 
 Or, to run the `0.11.1` release specifically:
 
 ```
-$ docker run --name some-bitcoin amacneil/bitcoin:0.11.1
+$ docker run amacneil/bitcoin:0.11.1
 ```
 
-To run a bitcoin container in the background, pass the `-d` option to `docker run`:
+To run a bitcoin container in the background, pass the `-d` option to `docker run`, and give your container a name for easy reference later:
 
 ```
-$ docker run -d --name some-bitcoin amacneil/bitcoin
+$ docker run -d --rm --name bitcoind amacneil/bitcoin
 ```
 
 Once you have a bitcoin service running in the background, you can show running containers:
@@ -51,14 +51,14 @@ $ docker ps
 Or view the logs of a service:
 
 ```
-$ docker logs -f some-bitcoin
+$ docker logs -f bitcoind
 ```
 
 To stop and restart a running container:
 
 ```
-$ docker stop some-bitcoin
-$ docker start some-bitcoin
+$ docker stop bitcoind
+$ docker start bitcoind
 ```
 
 **Alternative Clients**
@@ -93,13 +93,21 @@ Specific versions of these alternate clients may be run using the command line o
 
 **Data Volumes**
 
-By default, Docker will create ephemeral containers. That is, the blockchain data will not be persisted if you create a new bitcoin container.
+By default, Docker will create ephemeral containers. That is, the blockchain data will not be persisted, and you will need to sync the blockchain from scratch each time you launch a container.
 
-To create a simple `busybox` data volume and link it to a bitcoin service:
+To keep your blockchain data between container restarts or upgrades, simply add the `-v` option to create a [data volume](https://docs.docker.com/engine/tutorials/dockervolumes/):
 
 ```
-$ docker create -v /data --name btcdata busybox /bin/true
-$ docker run --volumes-from btcdata amacneil/bitcoin
+$ docker run -d --rm --name bitcoind -v bitcoin-data:/data amacneil/bitcoin
+$ docker ps
+$ docker inspect bitcoin-data
+```
+
+Alternatively, you can map the data volume to a location on your host:
+
+```
+$ docker run -d --rm --name bitcoind -v "$PWD/data:/data" amacneil/bitcoin
+$ ls -alh ./data
 ```
 
 **Configuring Bitcoin**
