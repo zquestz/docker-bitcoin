@@ -10,6 +10,7 @@ env:
   - BRANCH=xt
 
 script:
+  - make validate
   - make test
 
 after_script:
