@@ -70,6 +70,12 @@ btc1:
   1.14.3:
     url: https://github.com/btc1/bitcoin/releases/download/v1.14.3/bitcoin-1.14.3-x86_64-linux-gnu.tar.gz
     sha256: 021e9034163a8707f2714b040dca3728a5fef05f01b8397e989e2401c8bd9752
+  1.14.4:
+    url: https://github.com/btc1/bitcoin/releases/download/v1.14.4/bitcoin-1.14.4-x86_64-linux-gnu.tar.gz
+    sha256: 11a15ee91f68edac4aaec2b1188fb9a2cc713592882606977242b4c6b6314c17
+  1.14.5:
+    url: https://github.com/btc1/bitcoin/releases/download/v1.14.5/bitcoin-1.14.5-x86_64-linux-gnu.tar.gz
+    sha256: 77ed18fe14413778ad37bc0c3cac38ce99268ff37e1c3cb81f3af82d9f40e9c7
 
 classic:
   0.11.2.cl1:
