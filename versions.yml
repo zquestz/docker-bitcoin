@@ -117,6 +117,16 @@ classic:
     asc_url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v1.2.3/SHA256SUMS.asc
     key: C07B28FD422F1B49E78889F5C2A5545EA91CCAE7
     sha256: 9eaa9a2ad72199f314a558b24424575084368ce5866bfbbb1a85429cd8fe67f8
+  1.2.4:
+    url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v1.2.4/bitcoin-1.2.4-linux64.tar.gz
+    asc_url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v1.2.4/SHA256SUMS.asc
+    key: C07B28FD422F1B49E78889F5C2A5545EA91CCAE7
+    sha256: a177ec6b44c673d0834f1486cb9bf999d962c40bc476dcafd3b22879757ea5b7
+  1.2.5:
+    url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v1.2.5/bitcoin-1.2.5-linux64.tar.gz
+    asc_url: https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v1.2.5/SHA256SUMS.asc
+    key: C07B28FD422F1B49E78889F5C2A5545EA91CCAE7
+    sha256: 91438d75349814e49d54fdcbce2af42ebf561048688cecf59fbd293bbb1ef77c
 
 unlimited:
   0.11.2:
