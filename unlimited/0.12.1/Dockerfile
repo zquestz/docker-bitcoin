@@ -13,17 +13,17 @@ ENV BITCOIN_SHA256 34de171ac1b48b0780d68f3844c9fd2e8bfe6a7780b55e1f012067c2440eb
 
 # install bitcoin binaries
 RUN set -ex \
-	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
-	&& wget -qO $BITCOIN_DIST $BITCOIN_URL \
-	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
-	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
-	&& rm bitcoin*
+	&& cd /tmp \
+	&& wget -qO bitcoin.tar.gz "$BITCOIN_URL" \
+	&& echo "$BITCOIN_SHA256 bitcoin.tar.gz" | sha256sum -c - \
+	&& tar -xzvf bitcoin.tar.gz -C /usr/local --strip-components=1 --exclude=*-qt \
+	&& rm -rf /tmp/*
 
 # create data directory
 ENV BITCOIN_DATA /data
-RUN mkdir $BITCOIN_DATA \
-	&& chown -R bitcoin:bitcoin $BITCOIN_DATA \
-	&& ln -sfn $BITCOIN_DATA /home/bitcoin/.bitcoin \
+RUN mkdir "$BITCOIN_DATA" \
+	&& chown -R bitcoin:bitcoin "$BITCOIN_DATA" \
+	&& ln -sfn "$BITCOIN_DATA" /home/bitcoin/.bitcoin \
 	&& chown -h bitcoin:bitcoin /home/bitcoin/.bitcoin
 VOLUME /data
 

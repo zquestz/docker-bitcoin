@@ -15,20 +15,20 @@ ENV BITCOIN_PGP_KEY 26646D99CBAEC9B81982EF6029D9EE6B1FC730C1
 
 # install bitcoin binaries
 RUN set -ex \
-	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
-	&& wget -qO $BITCOIN_DIST $BITCOIN_URL \
-	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
-	&& gpg --keyserver keyserver.ubuntu.com --recv-keys $BITCOIN_PGP_KEY \
-	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
+	&& cd /tmp \
+	&& wget -qO bitcoin.tar.gz "$BITCOIN_URL" \
+	&& echo "$BITCOIN_SHA256 bitcoin.tar.gz" | sha256sum -c - \
+	&& gpg --keyserver keyserver.ubuntu.com --recv-keys "$BITCOIN_PGP_KEY" \
+	&& wget -qO bitcoin.asc "$BITCOIN_ASC_URL" \
 	&& gpg --verify bitcoin.asc \
-	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
-	&& rm bitcoin*
+	&& tar -xzvf bitcoin.tar.gz -C /usr/local --strip-components=1 --exclude=*-qt \
+	&& rm -rf /tmp/*
 
 # create data directory
 ENV BITCOIN_DATA /data
-RUN mkdir $BITCOIN_DATA \
-	&& chown -R bitcoin:bitcoin $BITCOIN_DATA \
-	&& ln -sfn $BITCOIN_DATA /home/bitcoin/.bitcoin \
+RUN mkdir "$BITCOIN_DATA" \
+	&& chown -R bitcoin:bitcoin "$BITCOIN_DATA" \
+	&& ln -sfn "$BITCOIN_DATA" /home/bitcoin/.bitcoin \
 	&& chown -h bitcoin:bitcoin /home/bitcoin/.bitcoin
 VOLUME /data
 
