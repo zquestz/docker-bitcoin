@@ -59,7 +59,7 @@ core:
     asc_url: https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit0.3/SHA256SUMS.asc
     key: E463A93F5F3117EEDE6C7316BD02942421F4889F
     sha256: 668ba1ae6d54307878e1e02d396b96e0bb3829b71735cb1992910cadf861db1f
-    client_version: 0.14.2.0-3a051b8
+    client_version: v0.14.2.0-3a051b8
   0.14.2-uasfsegwit1.0:
     url: https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit1.0/bitcoin-0.14.2-uasfsegwit1.0-x86_64-linux-gnu.tar.gz
     asc_url: https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit1.0/SHA256SUMS.asc
@@ -249,6 +249,28 @@ unlimited:
   1.0.1.2:
     url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.1.2-linux64.tar.gz
     sha256: 5ea1740325b2ad6bcd2c6985d1716186d2f2da54b9d9ab7a9948afa06f15d030
+  1.0.1.3:
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.1.3-linux64.tar.gz
+    sha256: 864908c88d6b9d08c64e46b12acb5c1f8418b0737dfbeffdb8b1c03907892b02
+  1.0.1.4:
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.1.4-linux64.tar.gz
+    sha256: f82b98f552ae49c7bca011325a5d9374425e78d91c1baac02cba64b358beb563
+  1.0.2.0:
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.2.0-linux64.tar.gz
+    sha256: 3c6dcf8af26def3f204a38340b469448a8ec50de986e2d5934ab3d3eb22ef95f
+  1.0.3.0:
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.3.0-linux64.tar.gz
+    sha256: a6658bac22f082539969a243943c7d1a865abd40cdfe39465ff82b4eba387b22
+  1.1.0.0:
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/BUcash-1.1.0.0-linux64.tar.gz
+    sha256: 0f0375d4e1fc4c66fdd7c5b0fc5c233454ab7c7f9ef2d65236af3975a8ae6189
+    client_version: bucash1.1.0.0
+  1.1.1.0:
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/BUcash-1.1.1.0-linux64.tar.gz
+    sha256: 562191a290e23adf24e1a0b6863765e8f2afeb2e61e20c9067fb1a8ef0c2ef92
+  1.1.1.1:
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloads/raw/master/BUcash-1.1.1.1-linux64.tar.gz
+    sha256: bdc3e07ce2cacc42295d7559fbaae5ae60fed82479c5644ab7293bbea6b79a62
 
 xt:
   0.11.0B:
@@ -273,4 +295,4 @@ xt:
     asc_url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11G2/SHA256SUMS.asc
     key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
     sha256: f7db3f825d27b6d9aaad687338b082b29a4341443431afea57f46ba09c719fb7
-    client_version: 0.11G2
+    client_version: v0.11G2
