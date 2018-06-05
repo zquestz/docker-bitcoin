@@ -106,6 +106,9 @@ abc:
   0.17.1:
     url: https://download.bitcoinabc.org/0.17.1/linux/bitcoin-abc-0.17.1-x86_64-linux-gnu.tar.gz
     sha256: eccf8b61ba0549f6839e586c7dc6fc4bf6d7591ac432aaea8a7df0266b113d27
+  0.17.2:
+    url: https://download.bitcoinabc.org/0.17.2/linux/bitcoin-abc-0.17.2-x86_64-linux-gnu.tar.gz
+    sha256: aa8961e11139ea071e1884e9604e67611b48ee76cdf55d05f9a8dfe25d8feeae
 
 btc1:
   1.14.3:
