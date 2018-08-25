@@ -133,13 +133,9 @@ unlimited:
   1.0.3.0:
     url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.3.0-linux64.tar.gz
     sha256: a6658bac22f082539969a243943c7d1a865abd40cdfe39465ff82b4eba387b22
-  1.1.0.0:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/BUcash-1.1.0.0-linux64.tar.gz
-    sha256: 0f0375d4e1fc4c66fdd7c5b0fc5c233454ab7c7f9ef2d65236af3975a8ae6189
-    client_version: bucash1.1.0.0
-  1.1.1.0:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/BUcash-1.1.1.0-linux64.tar.gz
-    sha256: 562191a290e23adf24e1a0b6863765e8f2afeb2e61e20c9067fb1a8ef0c2ef92
+  1.4.0.0:
+    url: https://www.bitcoinunlimited.info/downloads/BUcash-1.4.0.0-linux64.tar.gz
+    sha256: 1d9ea2e84e197f190a8a62bff615d8a7ead3972783b037920628397106121fa1
 
 xt:
   0.11.0B:

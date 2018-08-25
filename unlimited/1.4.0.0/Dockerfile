@@ -7,9 +7,9 @@ RUN set -ex \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV BITCOIN_VERSION 1.1.1.0
-ENV BITCOIN_URL https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/BUcash-1.1.1.0-linux64.tar.gz
-ENV BITCOIN_SHA256 562191a290e23adf24e1a0b6863765e8f2afeb2e61e20c9067fb1a8ef0c2ef92
+ENV BITCOIN_VERSION 1.4.0.0
+ENV BITCOIN_URL https://www.bitcoinunlimited.info/downloads/BUcash-1.4.0.0-linux64.tar.gz
+ENV BITCOIN_SHA256 1d9ea2e84e197f190a8a62bff615d8a7ead3972783b037920628397106121fa1
 
 # install bitcoin binaries
 RUN set -ex \
