@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
-require "erb"
-require "ostruct"
-require "yaml"
+require 'erb'
+require 'ostruct'
+require 'yaml'
 
-# run external command and test success
+# Run external command and test success.
 def run(cmd)
-  puts "#{cmd}"
+  puts cmd
   success = system(cmd)
   exit $?.exitstatus unless success
 end
@@ -15,7 +15,7 @@ def status(msg)
   puts "\n==> #{msg}"
 end
 
-# update docker files for version
+# Update docker files for a version.
 def update_version(branch, version, opts={})
   dir = File.join(branch, version)
   status "Update version #{dir}"
@@ -28,9 +28,9 @@ def update_version(branch, version, opts={})
   # render Dockerfile
   opts[:version] = version
 
-  dockerfile = ERB.new(File.read("Dockerfile.erb"), nil, "-")
+  dockerfile = ERB.new(File.read('Dockerfile.erb'), nil, '-')
   result = dockerfile.result(OpenStruct.new(opts).instance_eval { binding })
-  File.write(File.join(dir, "Dockerfile"), result)
+  File.write(File.join(dir, 'Dockerfile'), result)
 end
 
 def load_versions
