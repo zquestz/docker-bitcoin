@@ -165,3 +165,9 @@ xt:
     key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
     sha256: f7db3f825d27b6d9aaad687338b082b29a4341443431afea57f46ba09c719fb7
     client_version: v0.11G2
+  0.11.0J:
+    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11J/bitcoin-xt-0.11.0-J-linux64.tar.gz
+    asc_url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11J/SHA256SUMS.asc
+    key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
+    sha256: 7c3ce442a50a5d1d04d4a6ddb011f278ca90cd22ac50c56726ca6ad0db24b6de
+    client_version: v0.11J
