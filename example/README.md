@@ -1,6 +1,6 @@
 # How to run a full Bitcoin Cash node using Docker Compose
 
-This directory contains an example [docker-compose.yml](./docker-compose.yml) file which will allow you to run a full Bitcoin Cash node. The compose file will automatically handle creating a data volume for you, so that blockchain data is persisted between upgrades. It also makes it easy to run `bitcoin-cli` against your running Bitcoin node.
+This directory contains an example [docker-compose.yml](./docker-compose.yml) file which will allow you to run a full Bitcoin Cash node. The compose file will automatically handle creating a data volume for you, so that blockchain data is persisted between upgrades. It also makes it easy to run `bitcoin-cli` against your running Bitcoin Cash node.
 
 Before you can get started, you need to install Docker Compose. Follow the [Docker Compose installation instructions](https://docs.docker.com/compose/install/) relevant to your platform.
 
@@ -36,7 +36,7 @@ Note that passing `--rm` to `docker-compose run` is not strictly necessary. Howe
 
 ### Configuration options
 
-To configure your Bitcoin Cash node, update the `command: bitcoind` line in `docker-compose.yml`. For example, to run a node on the Bitcoin testnet, you would change the line to:
+To configure your Bitcoin Cash node, update the `command: bitcoind` line in `docker-compose.yml`. For example, to run a node on the Bitcoin Cash testnet, you would change the line to:
 
 ```
 command: bitcoind -testnet
