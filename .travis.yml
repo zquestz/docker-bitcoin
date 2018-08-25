@@ -4,7 +4,6 @@ services: docker
 
 env:
   - BRANCH=abc
-  - BRANCH=core
   - BRANCH=unlimited
   - BRANCH=xt
 

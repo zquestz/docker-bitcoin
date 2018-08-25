@@ -1,6 +1,6 @@
-# How to run a full Bitcoin node using Docker Compose
+# How to run a full Bitcoin Cash node using Docker Compose
 
-This directory contains an example [docker-compose.yml](./docker-compose.yml) file which will allow you to run a full Bitcoin node. The compose file will automatically handle creating a data volume for you, so that blockchain data is persisted between Bitcoin upgrades. It also makes it easy to run `bitcoin-cli` against your running Bitcoin node.
+This directory contains an example [docker-compose.yml](./docker-compose.yml) file which will allow you to run a full Bitcoin Cash node. The compose file will automatically handle creating a data volume for you, so that blockchain data is persisted between upgrades. It also makes it easy to run `bitcoin-cli` against your running Bitcoin node.
 
 Before you can get started, you need to install Docker Compose. Follow the [Docker Compose installation instructions](https://docs.docker.com/compose/install/) relevant to your platform.
 
@@ -11,7 +11,7 @@ First, you should create a directory to keep your compose file in. Copy the exam
 ```sh
 $ mkdir bitcoin
 $ cd bitcoin
-$ wget https://raw.githubusercontent.com/amacneil/docker-bitcoin/master/example/docker-compose.yml
+$ wget https://raw.githubusercontent.com/zquestz/docker-bitcoin/master/example/docker-compose.yml
 ```
 
 ### Launch bitcoind
@@ -26,7 +26,7 @@ $ docker-compose down   # stop bitcoind (blockchain data will remain on disk)
 
 ### Run bitcoin-cli
 
-To run commands against your running Bitcoin node, a `bitcoin-cli` shorthand is provided. Simply use the `docker-compose run` command:
+To run commands against your running Bitcoin Cash node, a `bitcoin-cli` shorthand is provided. Simply use the `docker-compose run` command:
 
 ```sh
 $ docker-compose run --rm bitcoin-cli getinfo
@@ -36,12 +36,12 @@ Note that passing `--rm` to `docker-compose run` is not strictly necessary. Howe
 
 ### Configuration options
 
-To configure your Bitcoin node, update the `command: bitcoind` line in `docker-compose.yml`. For example, to run a node on the Bitcoin testnet, you would change the line to:
+To configure your Bitcoin Cash node, update the `command: bitcoind` line in `docker-compose.yml`. For example, to run a node on the Bitcoin testnet, you would change the line to:
 
 ```
 command: bitcoind -testnet
 ```
 
-### Running a specific fork or version
+### Running a specific type of node
 
-The `docker-compose.yml` file can be edited to suit your needs. If you wish to run a specific version or fork of bitcoin, simply replace `amacneil/bitcoin` with the desired image.
+The `docker-compose.yml` file can be edited to suit your needs. If you wish to run a specific type of node, simply replace `zquestz/bitcoin-abc` with the desired image.

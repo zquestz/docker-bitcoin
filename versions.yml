@@ -1,100 +1,4 @@
-core:
-  0.10.3:
-    url: https://bitcoin.org/bin/bitcoin-core-0.10.3/bitcoin-0.10.3-linux64.tar.gz
-    asc_url: https://bitcoin.org/bin/bitcoin-core-0.10.3/SHA256SUMS.asc
-    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
-    sha256: 586eb5576f71cd1ad2a42a26f67afc87deffc51d9f75348e2c7e96b1a401e23d
-  0.11.1:
-    url: https://bitcoin.org/bin/bitcoin-core-0.11.1/bitcoin-0.11.1-linux64.tar.gz
-    asc_url: https://bitcoin.org/bin/bitcoin-core-0.11.1/SHA256SUMS.asc
-    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
-    sha256: 1e2c16e1dca75112e20f2cfb1acbdc45eb6fd4c6b49919fd64b45d960531abe2
-  0.11.2:
-    url: https://bitcoin.org/bin/bitcoin-core-0.11.2/bitcoin-0.11.2-linux64.tar.gz
-    asc_url: https://bitcoin.org/bin/bitcoin-core-0.11.2/SHA256SUMS.asc
-    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
-    sha256: 2fc13c64fd10b7f75aa93d1f1df78f353a02cca62e17f9ffd106527da2e8b908
-  0.12.0:
-    url: https://bitcoin.org/bin/bitcoin-core-0.12.0/bitcoin-0.12.0-linux64.tar.gz
-    asc_url: https://bitcoin.org/bin/bitcoin-core-0.12.0/SHA256SUMS.asc
-    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
-    sha256: ad97b28524d4f64f06549fb7d0ca45cfaa0f35090cf230cd80f3ad8cb8eaf9bd
-  0.12.1:
-    url: https://bitcoin.org/bin/bitcoin-core-0.12.1/bitcoin-0.12.1-linux64.tar.gz
-    asc_url: https://bitcoin.org/bin/bitcoin-core-0.12.1/SHA256SUMS.asc
-    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
-    sha256: 54aca14b7512801ab78cc93f8576e1b66364a890e8017e8a187e4bf0209fd28c
-  0.13.0:
-    url: https://bitcoin.org/bin/bitcoin-core-0.13.0/bitcoin-0.13.0-x86_64-linux-gnu.tar.gz
-    asc_url: https://bitcoin.org/bin/bitcoin-core-0.13.0/SHA256SUMS.asc
-    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
-    sha256: bcc1e42d61f88621301bbb00512376287f9df4568255f8b98bc10547dced96c8
-  0.13.1:
-    url: https://bitcoin.org/bin/bitcoin-core-0.13.1/bitcoin-0.13.1-x86_64-linux-gnu.tar.gz
-    asc_url: https://bitcoin.org/bin/bitcoin-core-0.13.1/SHA256SUMS.asc
-    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
-    sha256: 2293de5682375b8edfde612d9e152b42344d25d3852663ba36f7f472b27954a4
-  0.13.2:
-    url: https://bitcoin.org/bin/bitcoin-core-0.13.2/bitcoin-0.13.2-x86_64-linux-gnu.tar.gz
-    asc_url: https://bitcoin.org/bin/bitcoin-core-0.13.2/SHA256SUMS.asc
-    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
-    sha256: 29215a7fe7430224da52fc257686d2d387546eb8acd573a949128696e8761149
-  0.14.0:
-    url: https://bitcoin.org/bin/bitcoin-core-0.14.0/bitcoin-0.14.0-x86_64-linux-gnu.tar.gz
-    asc_url: https://bitcoin.org/bin/bitcoin-core-0.14.0/SHA256SUMS.asc
-    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
-    sha256: 06e6ceeb687e784e9aaad45e9407c7eed5f7e9c9bbe44083179287f54f0f9f2b
-  0.14.1:
-    url: https://bitcoin.org/bin/bitcoin-core-0.14.1/bitcoin-0.14.1-x86_64-linux-gnu.tar.gz
-    asc_url: https://bitcoin.org/bin/bitcoin-core-0.14.1/SHA256SUMS.asc
-    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
-    sha256: 0c6920a9f3181a95ca029fdac5342b5702569ee441ec2128d19051f281683058
-  0.14.2:
-    url: https://bitcoin.org/bin/bitcoin-core-0.14.2/bitcoin-0.14.2-x86_64-linux-gnu.tar.gz
-    asc_url: https://bitcoin.org/bin/bitcoin-core-0.14.2/SHA256SUMS.asc
-    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
-    sha256: 20acc6d5d5e0c4140387bc3445b8b3244d74c1c509bd98f62b4ee63bec31a92b
-
 abc:
-  0.14.1:
-    url: https://download.bitcoinabc.org/0.14.1/linux/bitcoin-0.14.1-x86_64-linux-gnu.tar.gz
-    sha256: 5e515896efbc2d6f639330146be61fea1ca62913648108d47190c987e539c7af
-  0.14.2:
-    url: https://download.bitcoinabc.org/0.14.2/linux/bitcoin-0.14.2-x86_64-linux-gnu.tar.gz
-    sha256: 23fbd4aeed885c41d287cec8529ae8f16a7af1ff7571ba63aa6e5a7e520108b7
-  0.14.3:
-    url: https://download.bitcoinabc.org/0.14.3/linux/bitcoin-0.14.3-x86_64-linux-gnu.tar.gz
-    sha256: 403f6e15297414fc29c1b53da1994aa69741fa86afb6ab452fed3c3f14288bf6
-  0.14.4:
-    url: https://download.bitcoinabc.org/0.14.4/linux/bitcoin-0.14.4-x86_64-linux-gnu.tar.gz
-    sha256: 4c39e84567e251dc299593643cd45d1efd7cc676e6d619ba506c3359a6a1c5f7
-  0.14.5:
-    url: https://download.bitcoinabc.org/0.14.5/linux/bitcoin-0.14.5-x86_64-linux-gnu.tar.gz
-    sha256: 66968be5add0e8de0526a4195e7bb6efedc973b025e793d3e285e897cfdd94fd
-  0.14.6:
-    url: https://download.bitcoinabc.org/0.14.6/linux/bitcoin-0.14.6-x86_64-linux-gnu.tar.gz
-    sha256: 9f37b8ec36a37944b016bbbf07340adb8ba644abb897b2d2e0edeb99ccf709c0
-  0.15.0:
-    url: https://download.bitcoinabc.org/0.15.0/linux/bitcoin-abc-0.15.0-x86_64-linux-gnu.tar.gz
-    sha256: de8ec283d6d3bb15545b39dc07f3207d7502d51dd98cfeac79e8d78462808cfc
-  0.15.1:
-    url: https://download.bitcoinabc.org/0.15.1/linux/bitcoin-abc-0.15.1-x86_64-linux-gnu.tar.gz
-    sha256: 159713d24f73ed31bd9aa684b5951255d85de4c70f328838b93ea5d5487c57bb
-  0.16.0:
-    url: https://download.bitcoinabc.org/0.16.0/linux/bitcoin-abc-0.16.0-x86_64-linux-gnu.tar.gz
-    sha256: 132912e57d28adc0dee8ad2beb6322e873310aa0c826b92f8c89a9b14c5b321a
-  0.16.1:
-    url: https://download.bitcoinabc.org/0.16.1/linux/bitcoin-abc-0.16.1-x86_64-linux-gnu.tar.gz
-    sha256: aa561770a850a8cdc1872eabc67502e5533e8ad16bafc20ea14700811426d538
-  0.16.2:
-    url: https://download.bitcoinabc.org/0.16.2/linux/bitcoin-abc-0.16.2-x86_64-linux-gnu.tar.gz
-    sha256: 5eeadea9c23069e08d18e0743f4a86a9774db7574197440c6d795fad5cad2084
-  0.17.0:
-    url: https://download.bitcoinabc.org/0.17.0/linux/bitcoin-abc-0.17.0-x86_64-linux-gnu.tar.gz
-    sha256: 01dbf4981a81b1f364b21d92610832a3c8f34a93ac62e55b91c475660009a6c7
-  0.17.1:
-    url: https://download.bitcoinabc.org/0.17.1/linux/bitcoin-abc-0.17.1-x86_64-linux-gnu.tar.gz
-    sha256: eccf8b61ba0549f6839e586c7dc6fc4bf6d7591ac432aaea8a7df0266b113d27
   0.17.2:
     url: https://download.bitcoinabc.org/0.17.2/linux/bitcoin-abc-0.17.2-x86_64-linux-gnu.tar.gz
     sha256: aa8961e11139ea071e1884e9604e67611b48ee76cdf55d05f9a8dfe25d8feeae
@@ -103,68 +7,12 @@ abc:
     sha256: f40ba895f21270d3a038361f9b2baed68df2688eaa01ad531b4ee29ee205cb98
 
 unlimited:
-  0.11.2:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-0.11.2-linux64.tar.gz
-    sha256: c6e83e5910d6b4ad852ac6d6a9ec6c92001a5070bb51d4292577174f22495355
-  0.12.0:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-0.12.0-linux64.tar.gz
-    sha256: 5831c3364fbb0dddf37b06303e2573850ba0116d57aee5710c96ee50f7499031
-  0.12.1:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-0.12.1-linux64.tar.gz
-    sha256: 34de171ac1b48b0780d68f3844c9fd2e8bfe6a7780b55e1f012067c2440ebd8a
-  1.0.0.1:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.0.1-linux64.tar.gz
-    sha256: cfedf1a4701cf05f8e8a9ff4da0f887bcb2b3bbdcd7631e9cfdeebb6dff01c72
-  1.0.1.0:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.1-linux64.tar.gz
-    sha256: bb604081403eefa423fb2911bf6d99258d9db655ece8c3d557f32388c06a6207
-  1.0.1.1:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.1.1-linux64.tar.gz
-    sha256: 68439e21ff6806af2acb64b3d4b60ef9bb47d82ba68fce98752de6cc9d1f4502
-  1.0.1.2:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.1.2-linux64.tar.gz
-    sha256: 5ea1740325b2ad6bcd2c6985d1716186d2f2da54b9d9ab7a9948afa06f15d030
-  1.0.1.3:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.1.3-linux64.tar.gz
-    sha256: 864908c88d6b9d08c64e46b12acb5c1f8418b0737dfbeffdb8b1c03907892b02
-  1.0.1.4:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.1.4-linux64.tar.gz
-    sha256: f82b98f552ae49c7bca011325a5d9374425e78d91c1baac02cba64b358beb563
-  1.0.2.0:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.2.0-linux64.tar.gz
-    sha256: 3c6dcf8af26def3f204a38340b469448a8ec50de986e2d5934ab3d3eb22ef95f
-  1.0.3.0:
-    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/bitcoinUnlimited-1.0.3.0-linux64.tar.gz
-    sha256: a6658bac22f082539969a243943c7d1a865abd40cdfe39465ff82b4eba387b22
   1.4.0.0:
     url: https://www.bitcoinunlimited.info/downloads/BUcash-1.4.0.0-linux64.tar.gz
     sha256: 1d9ea2e84e197f190a8a62bff615d8a7ead3972783b037920628397106121fa1
     client_version: bucash1.4.0.0
 
 xt:
-  0.11.0B:
-    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11B/bitcoin-xt-0.11.0-B-linux64.tar.gz
-    sha256: 3c51c03e28118e4846267075b150810e35c450462ce2483639e766643ed78fe1
-  0.11.0C:
-    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11C/bitcoin-xt-0.11.0-C-linux64.tar.gz
-    sha256: d879c701f500303ef807b3f49a6aa1ab021ad9e86b3f4a6f7a0bf3d5ce05e545
-  0.11.0D:
-    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11D/bitcoin-xt-0.11.0-D-linux64.tar.gz
-    sha256: ba0e8d553271687bc8184a4a7070e5d350171036f13c838db49bb0aabe5c5e49
-  0.11.0E:
-    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11E/bitcoin-xt-0.11.0-E-linux64.tar.gz
-    sha256: ea172e7b4c6fe30f0ea37834c721e7e35c865fae9d88c30517bfb4a3901689bb
-  0.11.0F:
-    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11F/bitcoin-xt-0.11.0-F-linux64.tar.gz
-    asc_url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11F/SHA256SUMS.asc
-    key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
-    sha256: fc51558f73f2153866fc47d1ab7eebccd5c188e605f078155f2ff80290939184
-  0.11.0G:
-    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11G2/bitcoin-xt-0.11.0-G-linux64.tar.gz
-    asc_url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11G2/SHA256SUMS.asc
-    key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
-    sha256: f7db3f825d27b6d9aaad687338b082b29a4341443431afea57f46ba09c719fb7
-    client_version: v0.11G2
   0.11.0J:
     url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11J/bitcoin-xt-0.11.0-J-linux64.tar.gz
     asc_url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11J/SHA256SUMS.asc
