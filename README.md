@@ -15,19 +15,31 @@ To see the available versions/tags, please visit the appropriate pages on Docker
 
 ### Usage
 
-To start a bitcoin-abc instance running the latest version:
+To run the latest version of Bitcoin ABC:
 
 ```
 $ docker run zquestz/bitcoin-abc
 ```
 
-To run a bitcoin-abc container in the background, pass the `-d` option to `docker run`, and give your container a name for easy reference later:
+To run the latest version of Bitcoin Unlimited:
+
+```
+$ docker run zquestz/bitcoin-unlimited
+```
+
+To run the latest version of Bitcoin XT:
+
+```
+$ docker run zquestz/bitcoin-xt
+```
+
+To run a container in the background, pass the `-d` option to `docker run`, and give your container a name for easy reference later:
 
 ```
 $ docker run -d --rm --name bitcoind zquestz/bitcoin-abc
 ```
 
-Once you have a bitcoin-abc service running in the background, you can show running containers:
+Once you have the bitcoind service running in the background, you can show running containers:
 
 ```
 $ docker ps
@@ -44,22 +56,6 @@ To stop and restart a running container:
 ```
 $ docker stop bitcoind
 $ docker start bitcoind
-```
-
-### Alternative Clients
-
-Images are also provided for Bitcoin Unlimited and Bitcoin XT.
-
-To run the latest version of Bitcoin Unlimited:
-
-```
-$ docker run zquestz/bitcoin-unlimited
-```
-
-To run the latest version of Bitcoin XT:
-
-```
-$ docker run zquestz/bitcoin-xt
 ```
 
 ### Configuring Bitcoin
