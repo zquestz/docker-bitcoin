@@ -106,7 +106,7 @@ $ docker run -d --rm --name bitcoind -v bitcoin-data:/data --network bitcoin zqu
 $ docker run --rm --network bitcoin zquestz/bitcoin-abc bitcoin-cli -rpcconnect=bitcoind getinfo
 ```
 
-# Kubernetes Configs
+### Kubernetes Configs
 
 The following directions will walk you through creating a BCH full node within GKE (Google Container Engine).
 
@@ -121,7 +121,7 @@ Steps:
 4. Run `kubectl create -f /path/to/kube`
 5. Profit!
 
-### bitcoin-deployment.yml
+#### bitcoin-deployment.yml
 ```
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -167,7 +167,7 @@ spec:
             fsType: ext4
 ```
 
-### bitcoin-secrets.yml
+#### bitcoin-secrets.yml
 ```
 apiVersion: v1
 kind: Secret
@@ -179,7 +179,7 @@ data:
   rpcpass: aXRvbGR5b3V0b2NoYW5nZXRoaXM=
 ```
 
-### bitcoin-srv.yml
+#### bitcoin-srv.yml
 ```
 apiVersion: v1
 kind: Service
