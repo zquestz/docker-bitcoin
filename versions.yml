@@ -5,6 +5,9 @@ abc:
   0.18.0:
     url: https://download.bitcoinabc.org/0.18.0/linux/bitcoin-abc-0.18.0-x86_64-linux-gnu.tar.gz
     sha256: f40ba895f21270d3a038361f9b2baed68df2688eaa01ad531b4ee29ee205cb98
+  0.18.1:
+    url: https://download.bitcoinabc.org/0.18.1/linux/bitcoin-abc-0.18.1-x86_64-linux-gnu.tar.gz
+    sha256: f955a929d4412b479115abecdb54e8b57791bb59c8578ccfaefb13eb625bc4cb
 
 unlimited:
   1.4.0.0:
