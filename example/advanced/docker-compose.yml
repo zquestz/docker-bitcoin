@@ -11,9 +11,11 @@ services:
       - "8333:8333"
       # JSON-RPC
       - "8332:8332"
+      # ZMQ
+      - "28332:28332"
     volumes:
       # using a custom path for data dir
-      - /mnt/volume-sfo2-03/data:/data
+      - ./data:/data
       # using a custom path for custom bitcoin.conf
       - ./bitcoin.conf:/data/bitcoin.conf
     networks:
