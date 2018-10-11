@@ -7,24 +7,15 @@ RUN set -ex \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV BITCOIN_VERSION <%= version %>
-ENV BITCOIN_URL <%= url %>
-ENV BITCOIN_SHA256 <%= sha256 %>
-<% if asc_url -%>
-ENV BITCOIN_ASC_URL <%= asc_url %>
-ENV BITCOIN_PGP_KEY <%= key %>
-<% end -%>
+ENV BITCOIN_VERSION 0.1.0
+ENV BITCOIN_URL https://wormhole.cash/download/0.1.0/linux/wormhole-0.1.0-x86_64-linux-gnu.tar.gz
+ENV BITCOIN_SHA256 b85a17fbd006fe71c481fcec4968902a7acfa85c364a356db76b3af3f44b30a6
 
 # install bitcoin binaries
 RUN set -ex \
 	&& cd /tmp \
 	&& wget -qO bitcoin.tar.gz "$BITCOIN_URL" \
 	&& echo "$BITCOIN_SHA256 bitcoin.tar.gz" | sha256sum -c - \
-<% if asc_url -%>
-	&& gpg --keyserver keyserver.ubuntu.com --recv-keys "$BITCOIN_PGP_KEY" \
-	&& wget -qO bitcoin.asc "$BITCOIN_ASC_URL" \
-	&& gpg --verify bitcoin.asc \
-<% end -%>
 	&& tar -xzvf bitcoin.tar.gz -C /usr/local --strip-components=1 --exclude=*-qt \
 	&& rm -rf /tmp/*
 
@@ -40,4 +31,4 @@ COPY docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 8332 8333 18332 18333
-CMD ["<%= binary %>"]
+CMD ["wormholed"]

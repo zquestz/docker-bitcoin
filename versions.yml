@@ -25,3 +25,11 @@ xt:
     key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
     sha256: 7c3ce442a50a5d1d04d4a6ddb011f278ca90cd22ac50c56726ca6ad0db24b6de
     client_version: v0.11J
+
+wormhole:
+  0.1.0:
+    url: https://wormhole.cash/download/0.1.0/linux/wormhole-0.1.0-x86_64-linux-gnu.tar.gz
+    sha256: b85a17fbd006fe71c481fcec4968902a7acfa85c364a356db76b3af3f44b30a6
+    binary: wormholed
+    binary_cli: wormholed-cli
+    binary_tx: wormholed-tx
