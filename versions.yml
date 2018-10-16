@@ -20,7 +20,7 @@ unlimited:
   1.5.0.0:
     url: https://www.bitcoinunlimited.info/downloads/BUcash-1.5.0.0-linux64.tar.gz
     sha256: ffca9f54cc35fcf6cc5a8bd96b4b9c9efa3f474528ab29828d4e4b6e84e7e33d
-    client_version: bucash1.5.0.0
+    client_version: Bitcoin Unlimited Cash Edition Daemon version v1.5.0.0
 
 
 xt:
