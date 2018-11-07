@@ -21,6 +21,10 @@ unlimited:
     url: https://www.bitcoinunlimited.info/downloads/BUcash-1.5.0.0-linux64.tar.gz
     sha256: ffca9f54cc35fcf6cc5a8bd96b4b9c9efa3f474528ab29828d4e4b6e84e7e33d
     client_version: v1.5.0.0-5fd8162
+  1.5.0.1:
+    url: https://www.bitcoinunlimited.info/downloads/BUcash-1.5.0.1-linux64.tar.gz
+    sha256: 48b2a814f8cd53451b416a36fe1c3083cdef0a42e9329c459b39cb7daeb4c025
+    client_version: v1.5.0.1
 
 xt:
   0.11.0J:
@@ -37,3 +41,4 @@ wormhole:
     binary: wormholed
     binary_cli: wormholed-cli
     binary_tx: wormholed-tx
+    client_version: Earth-0.1.0-release
