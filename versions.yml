@@ -22,6 +22,11 @@ unlimited:
     sha256: 48b2a814f8cd53451b416a36fe1c3083cdef0a42e9329c459b39cb7daeb4c025
     client_version: v1.5.0.1
 
+sv:
+  0.1.0:
+    url: https://github.com/bitcoin-sv/bitcoin-sv/releases/download/v0.1.0/bitcoin-sv-0.1.0-x86_64-linux-gnu.tar.gz
+    sha256: bb4a8049698bb6723526e1bd457a7cfdb919eac491ee3c3b563c6c159ad278e3
+
 xt:
   0.11.0J:
     url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11J/bitcoin-xt-0.11.0-J-linux64.tar.gz
