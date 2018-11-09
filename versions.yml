@@ -11,6 +11,9 @@ abc:
   0.18.2:
     url: https://download.bitcoinabc.org/0.18.2/linux/bitcoin-abc-0.18.2-x86_64-linux-gnu.tar.gz
     sha256: 28d8511789a126aff16e256a03288948f2660c3c8cb0a4c809c5a8618a519a16
+  0.18.3:
+    url: https://download.bitcoinabc.org/0.18.3/linux/bitcoin-abc-0.18.3-x86_64-linux-gnu.tar.gz
+    sha256: 0c3e858df198a7ba8fd6e457d905d56088f3928e9ac54104cfcb55fb13c29433
 
 unlimited:
   1.5.0.0:
@@ -34,6 +37,12 @@ xt:
     key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
     sha256: 7c3ce442a50a5d1d04d4a6ddb011f278ca90cd22ac50c56726ca6ad0db24b6de
     client_version: v0.11J
+  0.11.0K:
+    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11K/bitcoin-xt-0.11.0-K-linux64.tar.gz
+    asc_url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11K/SHA256SUMS.asc
+    key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
+    sha256: d1dad45f304193811a975b073b10b1b24efbc8c799d651cbee17a22b7b3241b1
+    client_version: v0.11K
 
 wormhole:
   0.1.0:
