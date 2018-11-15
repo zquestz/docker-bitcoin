@@ -9,7 +9,7 @@ RUN set -ex \
 
 ENV BITCOIN_VERSION 0.18.3
 ENV BITCOIN_URL https://download.bitcoinabc.org/0.18.3/linux/bitcoin-abc-0.18.3-x86_64-linux-gnu.tar.gz
-ENV BITCOIN_SHA256 0c3e858df198a7ba8fd6e457d905d56088f3928e9ac54104cfcb55fb13c29433
+ENV BITCOIN_SHA256 409b0bae0b24c8011d546e4adb9e4b0c2213435f2a10f947b79040bfe9a32b9b
 
 # install bitcoin binaries
 RUN set -ex \

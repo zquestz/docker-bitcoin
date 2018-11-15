@@ -13,17 +13,17 @@ abc:
     sha256: 28d8511789a126aff16e256a03288948f2660c3c8cb0a4c809c5a8618a519a16
   0.18.3:
     url: https://download.bitcoinabc.org/0.18.3/linux/bitcoin-abc-0.18.3-x86_64-linux-gnu.tar.gz
-    sha256: 0c3e858df198a7ba8fd6e457d905d56088f3928e9ac54104cfcb55fb13c29433
+    sha256: 409b0bae0b24c8011d546e4adb9e4b0c2213435f2a10f947b79040bfe9a32b9b
 
 unlimited:
-  1.5.0.0:
-    url: https://www.bitcoinunlimited.info/downloads/BUcash-1.5.0.0-linux64.tar.gz
-    sha256: ffca9f54cc35fcf6cc5a8bd96b4b9c9efa3f474528ab29828d4e4b6e84e7e33d
-    client_version: v1.5.0.0-5fd8162
   1.5.0.1:
     url: https://www.bitcoinunlimited.info/downloads/BUcash-1.5.0.1-linux64.tar.gz
     sha256: 48b2a814f8cd53451b416a36fe1c3083cdef0a42e9329c459b39cb7daeb4c025
     client_version: v1.5.0.1
+  1.5.0.2:
+    url: https://www.bitcoinunlimited.info/downloads/BUcash-1.5.0.2-linux64.tar.gz
+    sha256: 37000d4f730fd318f23349336d4befc5bc50deb19cede636de25c29f54508371
+    client_version: v1.5.0.2
 
 sv:
   0.1.0:
