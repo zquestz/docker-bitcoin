@@ -7,9 +7,9 @@ RUN set -ex \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV BITCOIN_VERSION 0.1.0
-ENV BITCOIN_URL https://wormhole.cash/download/0.1.0/linux/wormhole-0.1.0-x86_64-linux-gnu.tar.gz
-ENV BITCOIN_SHA256 b85a17fbd006fe71c481fcec4968902a7acfa85c364a356db76b3af3f44b30a6
+ENV BITCOIN_VERSION 0.2.2
+ENV BITCOIN_URL https://wormhole.cash/download/0.2.2/linux_wormhole/wormhole-0.2.2-x86_64-linux-gnu.tar.gz
+ENV BITCOIN_SHA256 4a495282ffce92e321fabc32b8d4dda40ed79dd46612cfbd924f0340315065a9
 
 # install bitcoin binaries
 RUN set -ex \

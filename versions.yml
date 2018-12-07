@@ -51,10 +51,9 @@ xt:
     client_version: v0.11K
 
 wormhole:
-  0.1.0:
-    url: https://wormhole.cash/download/0.1.0/linux/wormhole-0.1.0-x86_64-linux-gnu.tar.gz
-    sha256: b85a17fbd006fe71c481fcec4968902a7acfa85c364a356db76b3af3f44b30a6
+  0.2.2:
+    url: https://wormhole.cash/download/0.2.2/linux_wormhole/wormhole-0.2.2-x86_64-linux-gnu.tar.gz
+    sha256: 4a495282ffce92e321fabc32b8d4dda40ed79dd46612cfbd924f0340315065a9
     binary: wormholed
     binary_cli: wormholed-cli
     binary_tx: wormholed-tx
-    client_version: Earth-0.1.0-release
