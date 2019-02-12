@@ -26,17 +26,15 @@ abc:
   0.18.7:
     url: https://download.bitcoinabc.org/0.18.7/linux/bitcoin-abc-0.18.7-x86_64-linux-gnu.tar.gz
     sha256: 943101fc28159c10b139a97dc8939112740ba34be38fd98d413d6c7a33859132
+  0.18.8:
+    url: https://download.bitcoinabc.org/0.18.8/linux/bitcoin-abc-0.18.8-x86_64-linux-gnu.tar.gz
+    sha256: b58a04be81a6670aadce6c7d51f6afa00304fbd50dc70b47a74a93b814144ac1
 
 unlimited:
   1.5.1.0:
     url: https://www.bitcoinunlimited.info/downloads/BUcash-1.5.1.0-linux64.tar.gz
     sha256: c3a59b79e46a09ea2a3575ac8b1e9f098274084b676fba3e717346916f3e2a8d
     client_version: v1.5.1.0
-
-sv:
-  0.1.0:
-    url: https://github.com/bitcoin-sv/bitcoin-sv/releases/download/v0.1.0/bitcoin-sv-0.1.0-x86_64-linux-gnu.tar.gz
-    sha256: bb4a8049698bb6723526e1bd457a7cfdb919eac491ee3c3b563c6c159ad278e3
 
 xt:
   0.11.0J:

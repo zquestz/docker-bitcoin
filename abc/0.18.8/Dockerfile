@@ -7,9 +7,9 @@ RUN set -ex \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV BITCOIN_VERSION 0.1.0
-ENV BITCOIN_URL https://github.com/bitcoin-sv/bitcoin-sv/releases/download/v0.1.0/bitcoin-sv-0.1.0-x86_64-linux-gnu.tar.gz
-ENV BITCOIN_SHA256 bb4a8049698bb6723526e1bd457a7cfdb919eac491ee3c3b563c6c159ad278e3
+ENV BITCOIN_VERSION 0.18.8
+ENV BITCOIN_URL https://download.bitcoinabc.org/0.18.8/linux/bitcoin-abc-0.18.8-x86_64-linux-gnu.tar.gz
+ENV BITCOIN_SHA256 b58a04be81a6670aadce6c7d51f6afa00304fbd50dc70b47a74a93b814144ac1
 
 # install bitcoin binaries
 RUN set -ex \
