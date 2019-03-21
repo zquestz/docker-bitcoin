@@ -32,6 +32,9 @@ abc:
   0.19.0:
     url: https://download.bitcoinabc.org/0.19.0/linux/bitcoin-abc-0.19.0-x86_64-linux-gnu.tar.gz
     sha256: 788001fd5ce8ca0bd61e8a92f10d22b7a49695c3651c60fad11358ba29309a1b
+  0.19.1:
+    url: https://download.bitcoinabc.org/0.19.1/linux/bitcoin-abc-0.19.1-x86_64-linux-gnu.tar.gz
+    sha256: ffea0367af81fdc2f50e780938c6a1619aec1be125134777fff8a024b56923d1
 
 unlimited:
   1.5.1.0:
