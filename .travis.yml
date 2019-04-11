@@ -6,8 +6,6 @@ env:
   - BRANCH=abc
   - BRANCH=unlimited
   - BRANCH=xt
-  - BRANCH=wormhole
-  - BRANCH=sv
 
 script:
   - make validate
