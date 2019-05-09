@@ -5,7 +5,6 @@ services: docker
 env:
   - BRANCH=abc
   - BRANCH=unlimited
-  - BRANCH=xt
 
 script:
   - make validate

@@ -7,20 +7,15 @@ RUN set -ex \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV BITCOIN_VERSION 0.11.0J
-ENV BITCOIN_URL https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11J/bitcoin-xt-0.11.0-J-linux64.tar.gz
-ENV BITCOIN_SHA256 7c3ce442a50a5d1d04d4a6ddb011f278ca90cd22ac50c56726ca6ad0db24b6de
-ENV BITCOIN_ASC_URL https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11J/SHA256SUMS.asc
-ENV BITCOIN_PGP_KEY 8F6EDE3A88F86BC6F98255D7F5D993791A778012
+ENV BITCOIN_VERSION 0.19.5
+ENV BITCOIN_URL https://download.bitcoinabc.org/0.19.5/linux/bitcoin-abc-0.19.5-x86_64-linux-gnu.tar.gz
+ENV BITCOIN_SHA256 6b95bc75dd0f40eb86076bae002a87a1878b4f12614dfeeefa888ea4fdaebf8a
 
 # install bitcoin binaries
 RUN set -ex \
 	&& cd /tmp \
 	&& wget -qO bitcoin.tar.gz "$BITCOIN_URL" \
 	&& echo "$BITCOIN_SHA256 bitcoin.tar.gz" | sha256sum -c - \
-	&& gpg --no-tty --keyserver keyserver.ubuntu.com --recv-keys "$BITCOIN_PGP_KEY" \
-	&& wget -qO bitcoin.asc "$BITCOIN_ASC_URL" \
-	&& gpg --no-tty --verify bitcoin.asc \
 	&& tar -xzvf bitcoin.tar.gz -C /usr/local --strip-components=1 --exclude=*-qt \
 	&& rm -rf /tmp/*
 

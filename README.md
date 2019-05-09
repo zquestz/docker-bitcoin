@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/travis/zquestz/docker-bitcoin.svg)](https://travis-ci.org/zquestz/docker-bitcoin)
 [![License](https://img.shields.io/github/license/zquestz/docker-bitcoin.svg)](https://github.com/zquestz/docker-bitcoin/blob/master/LICENSE)
 
-Included in this repo are docker images for the main Bitcoin Cash full nodes. This includes Bitcoin ABC, Bitcoin Unlimited, and Bitcoin XT. A huge thanks to Adrian Macneil, and his now unmaintained original [repository](https://github.com/amacneil/docker-bitcoin), which provided the base for this repo.
+Included in this repo are docker images for the main Bitcoin Cash full nodes. This includes Bitcoin ABC and Bitcoin Unlimited. A huge thanks to Adrian Macneil, and his now unmaintained original [repository](https://github.com/amacneil/docker-bitcoin), which provided the base for this repo.
 
 This Docker image provides `bitcoind`, `bitcoin-cli` and `bitcoin-tx` which can be used to run and interact with a bitcoin server.
 
@@ -11,7 +11,6 @@ To see the available versions/tags, please visit the appropriate pages on Docker
 
 * [Bitcoin ABC](https://hub.docker.com/r/zquestz/bitcoin-abc/)
 * [Bitcoin Unlimited](https://hub.docker.com/r/zquestz/bitcoin-unlimited/)
-* [Bitcoin XT](https://hub.docker.com/r/zquestz/bitcoin-xt/)
 
 ### Usage
 
@@ -25,12 +24,6 @@ To run the latest version of Bitcoin Unlimited:
 
 ```
 $ docker run zquestz/bitcoin-unlimited
-```
-
-To run the latest version of Bitcoin XT:
-
-```
-$ docker run zquestz/bitcoin-xt
 ```
 
 To run a container in the background, pass the `-d` option to `docker run`, and give your container a name for easy reference later:
@@ -211,4 +204,4 @@ All files are generated from templates in the root of this repository. Please do
 * To add a new version, update [versions.yml](/versions.yml), then run `make update`.
 * To make a change to the Dockerfile which affects all current and historical versions, edit [Dockerfile.erb](/Dockerfile.erb) then run `make update`.
 
-If you would like to build and test containers for all versions (similar to what happens in CI), run `make`. If you would like to build and test all containers for a specific node, run `BRANCH=xt make`.
+If you would like to build and test containers for all versions (similar to what happens in CI), run `make`. If you would like to build and test all containers for a specific node, run `BRANCH=abc make`.

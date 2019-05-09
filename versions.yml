@@ -44,6 +44,9 @@ abc:
   0.19.4:
     url: https://download.bitcoinabc.org/0.19.4/linux/bitcoin-abc-0.19.4-x86_64-linux-gnu.tar.gz
     sha256: 0455ae2a8106fc1f20f8229e10baac4c7a496bc680974fa8fad05268189682c6
+  0.19.5:
+    url: https://download.bitcoinabc.org/0.19.5/linux/bitcoin-abc-0.19.5-x86_64-linux-gnu.tar.gz
+    sha256: 6b95bc75dd0f40eb86076bae002a87a1878b4f12614dfeeefa888ea4fdaebf8a
 
 unlimited:
   1.5.1.0:
@@ -54,18 +57,3 @@ unlimited:
     url: https://www.bitcoinunlimited.info/downloads/BUcash-1.6.0.0-linux64.tar.gz
     sha256: 8e8b6af109ed73d799aa37db2ac0b4c29fdeea28998693d1d1d7d85d9f7e8930
     client_version: bucash1.6.0.0
-
-xt:
-  0.11.0J:
-    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11J/bitcoin-xt-0.11.0-J-linux64.tar.gz
-    asc_url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11J/SHA256SUMS.asc
-    key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
-    sha256: 7c3ce442a50a5d1d04d4a6ddb011f278ca90cd22ac50c56726ca6ad0db24b6de
-    client_version: v0.11J
-  0.11.0K:
-    url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11K/bitcoin-xt-0.11.0-K-linux64.tar.gz
-    asc_url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11K/SHA256SUMS.asc
-    key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
-    sha256: d1dad45f304193811a975b073b10b1b24efbc8c799d651cbee17a22b7b3241b1
-    client_version: v0.11K
-
