@@ -5,7 +5,7 @@ services:
     # specify additional command line arguments here
     command: bitcoind
     healthcheck:
-      test: ["CMD", "/entrypoint.sh", "bitcoin-cli", "getinfo"]
+      test: ["CMD", "/entrypoint.sh", "bitcoin-cli", "getblockchaininfo"]
     ports:
       # change to 18333 if running testnet
       - "8333:8333"
