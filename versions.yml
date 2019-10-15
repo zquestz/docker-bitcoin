@@ -82,10 +82,6 @@ abc:
     sha256: 1739748d64a045030a42afdf9359e6ca3b12ddc99e9b1648aa0af4b7a26768d6
 
 unlimited:
-  1.6.0.0:
-    url: https://www.bitcoinunlimited.info/downloads/BUcash-1.6.0.0-linux64.tar.gz
-    sha256: 8e8b6af109ed73d799aa37db2ac0b4c29fdeea28998693d1d1d7d85d9f7e8930
-    client_version: bucash1.6.0.0
   1.6.0.1:
     url: https://www.bitcoinunlimited.info/downloads/BUcash-1.6.0.1-linux64.tar.gz
     sha256: 68023e6faefe7cfee8eee6cffb6200f52d47aa89c305323d97063664b514c94c
