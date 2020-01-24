@@ -9,7 +9,7 @@ RUN set -ex \
 
 ENV BITCOIN_VERSION 0.20.10
 ENV BITCOIN_URL https://download.bitcoinabc.org/0.20.10/linux/bitcoin-abc-0.20.10-x86_64-linux-gnu.tar.gz
-ENV BITCOIN_SHA256 e0dc201aa15d8a9ff507ac56d6468a2907ce1aa0b254ad4072fc2e216321512
+ENV BITCOIN_SHA256 e0dc201aa15d8a9ff507ac56d6468a2907ce1aa0b254ad4072fc2e2163215129
 
 # install bitcoin binaries
 RUN set -ex \
