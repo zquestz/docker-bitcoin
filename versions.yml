@@ -100,7 +100,10 @@ abc:
     sha256: ef3af6d1169cd939bee063c964bfbfa661cc82e35740f1b36b02f5f600842180
   0.20.10:
     url: https://download.bitcoinabc.org/0.20.10/linux/bitcoin-abc-0.20.10-x86_64-linux-gnu.tar.gz
-    sha256: e0dc201aa15d8a9ff507ac56d6468a2907ce1aa0b254ad4072fc2e2163215129
+    sha256: e0dc201aa15d8a9ff507ac56d6468a2907ce1aa0b254ad4072fc2e216321512
+  0.20.11:
+    url: https://download.bitcoinabc.org/0.20.11/linux/bitcoin-abc-0.20.11-x86_64-linux-gnu.tar.gz
+    sha256: 97e34dc7793c5bc8b53f65b9a52ff1c7f90d764af18ad577133e300dc7501eaa
 
 unlimited:
   1.6.0.1:
