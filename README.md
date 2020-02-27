@@ -75,7 +75,7 @@ By default, Docker will create ephemeral containers. That is, the blockchain dat
 To keep your blockchain data between container restarts or upgrades, simply add the `-v` option to create a [data volume](https://docs.docker.com/engine/tutorials/dockervolumes/):
 
 ```
-$ docker run -d --rm --name bitcoind -v bitcoin-data:/data zquestz/bitcoin-abc
+$ docker run -d --rm --name bitcoind -v bitcoin-data:/data zquestz/bitcoin-cash-node
 $ docker ps
 $ docker inspect bitcoin-data
 ```
@@ -83,7 +83,7 @@ $ docker inspect bitcoin-data
 Alternatively, you can map the data volume to a location on your host:
 
 ```
-$ docker run -d --rm --name bitcoind -v "$PWD/data:/data" zquestz/bitcoin-abc
+$ docker run -d --rm --name bitcoind -v "$PWD/data:/data" zquestz/bitcoin-cash-node
 $ ls -alh ./data
 ```
 
@@ -91,19 +91,19 @@ $ ls -alh ./data
 
 By default, Docker runs all containers on a private bridge network. This means that you are unable to access the RPC port (8332) necessary to run `bitcoin-cli` commands.
 
-There are several methods to run `bitclin-cli` against a running `bitcoind` container. The easiest is to simply let your `bitcoin-cli` container share networking with your `bitcoind` container:
+There are several methods to run `bitcoin-cli` against a running `bitcoind` container. The easiest is to simply let your `bitcoin-cli` container share networking with your `bitcoind` container:
 
 ```
-$ docker run -d --rm --name bitcoind -v bitcoin-data:/data zquestz/bitcoin-abc
-$ docker run --rm --network container:bitcoind zquestz/bitcoin-abc bitcoin-cli getinfo
+$ docker run -d --rm --name bitcoind -v bitcoin-data:/data zquestz/bitcoin-cash-node
+$ docker run --rm --network container:bitcoind zquestz/bitcoin-cash-node bitcoin-cli getinfo
 ```
 
-If you plan on exposing the RPC port to multiple containers (for example, if you are developing an application which communicates with the RPC port directly), you probably want to consider creating a [user-defined network](https://docs.docker.com/engine/userguide/networking/). You can then use this network for both your `bitcoind` and `bitclin-cli` containers, passing `-rpcconnect` to specify the hostname of your `bitcoind` container:
+If you plan on exposing the RPC port to multiple containers (for example, if you are developing an application which communicates with the RPC port directly), you probably want to consider creating a [user-defined network](https://docs.docker.com/engine/userguide/networking/). You can then use this network for both your `bitcoind` and `bitcoin-cli` containers, passing `-rpcconnect` to specify the hostname of your `bitcoind` container:
 
 ```
 $ docker network create bitcoin
-$ docker run -d --rm --name bitcoind -v bitcoin-data:/data --network bitcoin zquestz/bitcoin-abc
-$ docker run --rm --network bitcoin zquestz/bitcoin-abc bitcoin-cli -rpcconnect=bitcoind getinfo
+$ docker run -d --rm --name bitcoind -v bitcoin-data:/data --network bitcoin zquestz/bitcoin-cash-node
+$ docker run --rm --network bitcoin zquestz/bitcoin-cash-node bitcoin-cli -rpcconnect=bitcoind getinfo
 ```
 
 ### Kubernetes Configs
@@ -211,4 +211,4 @@ All files are generated from templates in the root of this repository. Please do
 * To add a new version, update [versions.yml](/versions.yml), then run `make update`.
 * To make a change to the Dockerfile which affects all current and historical versions, edit [Dockerfile.erb](/Dockerfile.erb) then run `make update`.
 
-If you would like to build and test containers for all versions (similar to what happens in CI), run `make`. If you would like to build and test all containers for a specific node, run `BRANCH=abc make`.
+If you would like to build and test containers for all versions (similar to what happens in CI), run `make`. If you would like to build and test all containers for a specific node, run `BRANCH=node make`.
