@@ -44,4 +44,4 @@ command: bitcoind -testnet
 
 ### Running a specific type of node
 
-The `docker-compose.yml` file can be edited to suit your needs. If you wish to run a specific type of node, simply replace `zquestz/bitcoin-abc` with the desired image.
+The `docker-compose.yml` file can be edited to suit your needs. If you wish to run a specific type of node, simply replace `zquestz/bitcoin-cash-node` with the desired image.

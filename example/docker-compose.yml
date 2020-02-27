@@ -1,7 +1,7 @@
 version: "3"
 services:
   bitcoind:
-    image: zquestz/bitcoin-abc
+    image: zquestz/bitcoin-cash-node
     # specify additional command line arguments here
     command: bitcoind
     healthcheck:
@@ -14,7 +14,7 @@ services:
     networks:
       - bitcoin
   bitcoin-cli:
-    image: zquestz/bitcoin-abc
+    image: zquestz/bitcoin-cash-node
     entrypoint: ["/entrypoint.sh", "bitcoin-cli"]
     command: ""
     depends_on:
