@@ -10,6 +10,7 @@ This Docker image provides `bitcoind`, `bitcoin-cli` and `bitcoin-tx` which can 
 To see the available versions/tags, please visit the appropriate pages on Docker Hub:
 
 * [Bitcoin ABC](https://hub.docker.com/r/zquestz/bitcoin-abc/)
+* [Bitcoin Cash Node](https://hub.docker.com/r/zquestz/bitcoin-cash-node/)
 * [Bitcoin Unlimited](https://hub.docker.com/r/zquestz/bitcoin-unlimited/)
 
 ### Usage
@@ -18,6 +19,12 @@ To run the latest version of Bitcoin ABC:
 
 ```
 $ docker run zquestz/bitcoin-abc
+```
+
+To run the latest version of Bitcoin Cash Node:
+
+```
+$ docker run zquestz/bitcoin-cash-node
 ```
 
 To run the latest version of Bitcoin Unlimited:
@@ -29,7 +36,7 @@ $ docker run zquestz/bitcoin-unlimited
 To run a container in the background, pass the `-d` option to `docker run`, and give your container a name for easy reference later:
 
 ```
-$ docker run -d --rm --name bitcoind zquestz/bitcoin-abc
+$ docker run -d --rm --name bitcoind zquestz/bitcoin-cash-node
 ```
 
 Once you have the bitcoind service running in the background, you can show running containers:
@@ -103,7 +110,7 @@ $ docker run --rm --network bitcoin zquestz/bitcoin-abc bitcoin-cli -rpcconnect=
 
 The following directions will walk you through creating a BCH full node within GKE (Google Container Engine).
 
-By default Bitcoin ABC is used, however this can be swapped for any other node quite easily.
+By default Bitcoin Cash Node is used, however this can be swapped for any other node quite easily.
 
 If you wish to run another version of bitcoind, just change the image reference in `bitcoin-deployment.yml`. If you don't trust the pre-built images, build your own. =)
 
@@ -144,7 +151,7 @@ spec:
             secretKeyRef:
               name: bitcoin
               key: rpcpass
-        image: zquestz/bitcoin-abc
+        image: zquestz/bitcoin-cash-node
         name: bitcoin
         volumeMounts:
           - mountPath: /data
