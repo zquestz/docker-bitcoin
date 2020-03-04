@@ -110,6 +110,9 @@ abc:
   0.21.0:
     url: https://download.bitcoinabc.org/0.21.0/linux/bitcoin-abc-0.21.0-x86_64-linux-gnu.tar.gz
     sha256: 2b7c717bd4a6d45fd029d6e087be30426d933828342c6e15c603c7fdeb3ff07d
+  0.21.1:
+    url: https://download.bitcoinabc.org/0.21.1/linux/bitcoin-abc-0.21.1-x86_64-linux-gnu.tar.gz
+    sha256: 45d4ae20c78ca3d3837fca56c264326eca117eaaa072cc48cd0d083695068455
 
 node:
   0.21.0:
