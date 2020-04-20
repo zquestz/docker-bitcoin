@@ -1,73 +1,4 @@
 abc:
-  0.17.2:
-    url: https://download.bitcoinabc.org/0.17.2/linux/bitcoin-abc-0.17.2-x86_64-linux-gnu.tar.gz
-    sha256: aa8961e11139ea071e1884e9604e67611b48ee76cdf55d05f9a8dfe25d8feeae
-  0.18.0:
-    url: https://download.bitcoinabc.org/0.18.0/linux/bitcoin-abc-0.18.0-x86_64-linux-gnu.tar.gz
-    sha256: f40ba895f21270d3a038361f9b2baed68df2688eaa01ad531b4ee29ee205cb98
-  0.18.1:
-    url: https://download.bitcoinabc.org/0.18.1/linux/bitcoin-abc-0.18.1-x86_64-linux-gnu.tar.gz
-    sha256: f955a929d4412b479115abecdb54e8b57791bb59c8578ccfaefb13eb625bc4cb
-  0.18.2:
-    url: https://download.bitcoinabc.org/0.18.2/linux/bitcoin-abc-0.18.2-x86_64-linux-gnu.tar.gz
-    sha256: 28d8511789a126aff16e256a03288948f2660c3c8cb0a4c809c5a8618a519a16
-  0.18.3:
-    url: https://download.bitcoinabc.org/0.18.3/linux/bitcoin-abc-0.18.3-x86_64-linux-gnu.tar.gz
-    sha256: 409b0bae0b24c8011d546e4adb9e4b0c2213435f2a10f947b79040bfe9a32b9b
-  0.18.4:
-    url: https://download.bitcoinabc.org/0.18.4/linux/bitcoin-abc-0.18.4-x86_64-linux-gnu.tar.gz
-    sha256: 22486042c960828a8faf473db6f5037aef93fe0c5b9aebfeba804850c1303c4b
-  0.18.5:
-    url: https://download.bitcoinabc.org/0.18.5/linux/bitcoin-abc-0.18.5-x86_64-linux-gnu.tar.gz
-    sha256: 11439fcdae421ae96d2a7ddc3d43c9c284af44716cb5f363c61e53885a5a8811
-  0.18.6:
-    url: https://download.bitcoinabc.org/0.18.6/linux/bitcoin-abc-0.18.6-x86_64-linux-gnu.tar.gz
-    sha256: 4de8e8c4679868befb3865ac23187dcb75824ccb4e29847efdb451df274bd65b
-  0.18.7:
-    url: https://download.bitcoinabc.org/0.18.7/linux/bitcoin-abc-0.18.7-x86_64-linux-gnu.tar.gz
-    sha256: 943101fc28159c10b139a97dc8939112740ba34be38fd98d413d6c7a33859132
-  0.18.8:
-    url: https://download.bitcoinabc.org/0.18.8/linux/bitcoin-abc-0.18.8-x86_64-linux-gnu.tar.gz
-    sha256: b58a04be81a6670aadce6c7d51f6afa00304fbd50dc70b47a74a93b814144ac1
-  0.19.0:
-    url: https://download.bitcoinabc.org/0.19.0/linux/bitcoin-abc-0.19.0-x86_64-linux-gnu.tar.gz
-    sha256: 788001fd5ce8ca0bd61e8a92f10d22b7a49695c3651c60fad11358ba29309a1b
-  0.19.1:
-    url: https://download.bitcoinabc.org/0.19.1/linux/bitcoin-abc-0.19.1-x86_64-linux-gnu.tar.gz
-    sha256: ffea0367af81fdc2f50e780938c6a1619aec1be125134777fff8a024b56923d1
-  0.19.2:
-    url: https://download.bitcoinabc.org/0.19.2/linux/bitcoin-abc-0.19.2-x86_64-linux-gnu.tar.gz
-    sha256: 615063ef2049f756c2cbb0b0823964a5eed5c5dd5420d10049a0b30563f631d2
-  0.19.3:
-    url: https://download.bitcoinabc.org/0.19.3/linux/bitcoin-abc-0.19.3-x86_64-linux-gnu.tar.gz
-    sha256: 4d784ea2e603e2dbf8d74f70263127a1fc1489a30d2ead60c0fc521d9e444076
-  0.19.4:
-    url: https://download.bitcoinabc.org/0.19.4/linux/bitcoin-abc-0.19.4-x86_64-linux-gnu.tar.gz
-    sha256: 0455ae2a8106fc1f20f8229e10baac4c7a496bc680974fa8fad05268189682c6
-  0.19.5:
-    url: https://download.bitcoinabc.org/0.19.5/linux/bitcoin-abc-0.19.5-x86_64-linux-gnu.tar.gz
-    sha256: 6b95bc75dd0f40eb86076bae002a87a1878b4f12614dfeeefa888ea4fdaebf8a
-  0.19.6:
-    url: https://download.bitcoinabc.org/0.19.6/linux/bitcoin-abc-0.19.6-x86_64-linux-gnu.tar.gz
-    sha256: b84aad1c0061fcafdef1b89cb75e2fc79be8f0a872fad8b1c40eebe59652a2d2
-  0.19.7:
-    url: https://download.bitcoinabc.org/0.19.7/linux/bitcoin-abc-0.19.7-x86_64-linux-gnu.tar.gz
-    sha256: 8e311bf0fb4a0334db5cc1c7caef19ea34342f73eb44264b48b593f50cb56b22
-  0.19.8:
-    url: https://download.bitcoinabc.org/0.19.8/linux/bitcoin-abc-0.19.8-x86_64-linux-gnu.tar.gz
-    sha256: cc40101ffe44340dcc82c6de2bc92040368a857548da133d7f1eb7a45a4c63f5
-  0.19.9:
-    url: https://download.bitcoinabc.org/0.19.9/linux/bitcoin-abc-0.19.9-x86_64-linux-gnu.tar.gz
-    sha256: 17764dd0de4a6c3d7b41b9cd7877017e7360ed9db0dcfadb40f7801c8a5d6ffc
-  0.19.10:
-    url: https://download.bitcoinabc.org/0.19.10/linux/bitcoin-abc-0.19.10-x86_64-linux-gnu.tar.gz
-    sha256: e9997d9122b7524f9eb522856b9ec54d9e07b63d9852b3e5a0646fc0df2a5efb
-  0.19.11:
-    url: https://download.bitcoinabc.org/0.19.11/linux/bitcoin-abc-0.19.11-x86_64-linux-gnu.tar.gz
-    sha256: 02ee61bd4d1babfe0a1e219dedd9d2a338cefb2e7334b69a5c2abf247381b263
-  0.19.12:
-    url: https://download.bitcoinabc.org/0.19.12/linux/bitcoin-abc-0.19.12-x86_64-linux-gnu.tar.gz
-    sha256: b346fad9c7021fa512a7ee08b0220b8770c02c047283f69b260e908e0fa78c9d
   0.20.0:
     url: https://download.bitcoinabc.org/0.20.0/linux/bitcoin-abc-0.20.0-x86_64-linux-gnu.tar.gz
     sha256: c00afe0f23163a64b692f9633ab0f49af7eedde32aa7b768582a0a731bb6d013
@@ -132,11 +63,12 @@ node:
     sha256: ae25cd1b7d4b55ba6add771c08aece875fbafdeea751c55d4f0038def9837935
 
 unlimited:
-  1.6.0.1:
-    url: https://www.bitcoinunlimited.info/downloads/BUcash-1.6.0.1-linux64.tar.gz
-    sha256: 68023e6faefe7cfee8eee6cffb6200f52d47aa89c305323d97063664b514c94c
-    client_version: bucash1.6.0.1
   1.7.0.0:
     url: https://www.bitcoinunlimited.info/downloads/BUcash-1.7.0.0-linux64.tar.gz
     sha256: 66345fd4b813f4c5a704ea7fdd60027be467008b10cf32db203146724128d140
     client_version: bucash1.7.0.0
+  1.8.0.0:
+    url: https://www.bitcoinunlimited.info/downloads/bch-unlimited-1.8.0.0-linux64.tar.gz
+    sha256: d36da1380e2b5c5412c52be958a7583bcab6d7a7bbb8057417eb892851e8bdd4
+    client_version: "v1.8.0.0-2e0b0d015"
+  
