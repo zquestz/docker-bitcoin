@@ -97,11 +97,14 @@ node:
 
 unlimited:
   1.7.0.0:
-    url: https://www.bitcoinunlimited.info/downloads/BUcash-1.7.0.0-linux64.tar.gz
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/BUcash-1.7.0.0-linux64.tar.gz
     sha256: 66345fd4b813f4c5a704ea7fdd60027be467008b10cf32db203146724128d140
     client_version: bucash1.7.0.0
   1.8.0.0:
     url: https://www.bitcoinunlimited.info/downloads/bch-unlimited-1.8.0.0-linux64.tar.gz
     sha256: d36da1380e2b5c5412c52be958a7583bcab6d7a7bbb8057417eb892851e8bdd4
     client_version: "v1.8.0.0-2e0b0d015"
-  
+  1.9.0.0:
+    url: https://www.bitcoinunlimited.info/downloads/bch-unlimited-1.9.0.0-linux64.tar.gz
+    sha256: 81fef8b1422a50fd49d64dba9c0dc6420663d436dfcea6c066e0f0561a753c92
+    client_version: "v1.9.0.0-96d2de8d0"
