@@ -8,7 +8,7 @@ RUN set -ex \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV BITCOIN_VERSION 1.7.0.0
-ENV BITCOIN_URL https://www.bitcoinunlimited.info/downloads/BUcash-1.7.0.0-linux64.tar.gz
+ENV BITCOIN_URL https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloadHistory/raw/master/BUcash-1.7.0.0-linux64.tar.gz
 ENV BITCOIN_SHA256 66345fd4b813f4c5a704ea7fdd60027be467008b10cf32db203146724128d140
 
 # install bitcoin binaries
