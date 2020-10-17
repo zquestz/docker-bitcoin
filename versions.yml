@@ -94,6 +94,9 @@ node:
   22.0.0:
     url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v22.0.0/bitcoin-cash-node-22.0.0-x86_64-linux-gnu.tar.gz
     sha256: 6487d3778e0e3319957553763d9e9d4420a46590636ffc63778a5e40e4e69ef5
+  22.1.0:
+    url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v22.1.0/bitcoin-cash-node-22.1.0-x86_64-linux-gnu.tar.gz
+    sha256: aa1002d51833b0de44084bde09951223be4f9c455427aef277f91dacd2f0f657
 
 unlimited:
   1.9.0.0:
