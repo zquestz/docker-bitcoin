@@ -113,4 +113,4 @@ unlimited:
   1.9.1.0:
     url: https://www.bitcoinunlimited.info/downloads/bch-unlimited-1.9.1.0-linux64.tar.gz
     sha256: e3f5b3b24f0310d85ca5f5d91880d570cc8639bd6afaea13bdb96482d3369382
-    client_version: "BCHunlimited1.9.1.0"
+    client_version: "v1.9.1.0-2e5a34be1"
