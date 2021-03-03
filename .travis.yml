@@ -3,7 +3,6 @@ language: bash
 services: docker
 
 env:
-  - BRANCH=abc
   - BRANCH=unlimited
   - BRANCH=node
 

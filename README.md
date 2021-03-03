@@ -9,17 +9,10 @@ This Docker image provides `bitcoind`, `bitcoin-cli` and `bitcoin-tx` which can 
 
 To see the available versions/tags, please visit the appropriate pages on Docker Hub:
 
-* [Bitcoin ABC](https://hub.docker.com/r/zquestz/bitcoin-abc/)
 * [Bitcoin Cash Node](https://hub.docker.com/r/zquestz/bitcoin-cash-node/)
 * [Bitcoin Unlimited](https://hub.docker.com/r/zquestz/bitcoin-unlimited/)
 
 ### Usage
-
-To run the latest version of Bitcoin ABC:
-
-```
-$ docker run zquestz/bitcoin-abc
-```
 
 To run the latest version of Bitcoin Cash Node:
 
