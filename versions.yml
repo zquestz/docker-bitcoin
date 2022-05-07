@@ -1,34 +1,10 @@
 node:
-  0.21.0:
-    url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v0.21.0/bitcoin-cash-node-0.21.0-x86_64-linux-gnu.tar.gz
-    sha256: c359773d4c586b9d67cd2adf7b085f89f3c9f590ea367deb69cc0b71bc8892ce
-  0.21.1:
-    url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v0.21.1/bitcoin-cash-node-0.21.1-x86_64-linux-gnu.tar.gz
-    sha256: ae25cd1b7d4b55ba6add771c08aece875fbafdeea751c55d4f0038def9837935
-  0.21.2:
-    url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v0.21.2/bitcoin-cash-node-0.21.2-x86_64-linux-gnu.tar.gz
-    sha256: f22df3e37beff99651dd2a0902d9627642464502a6d017f5b4494a44a6159177
-  22.0.0:
-    url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v22.0.0/bitcoin-cash-node-22.0.0-x86_64-linux-gnu.tar.gz
-    sha256: 6487d3778e0e3319957553763d9e9d4420a46590636ffc63778a5e40e4e69ef5
-  22.1.0:
-    url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v22.1.0/bitcoin-cash-node-22.1.0-x86_64-linux-gnu.tar.gz
-    sha256: aa1002d51833b0de44084bde09951223be4f9c455427aef277f91dacd2f0f657
-  22.2.0:
-    url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v22.2.0/bitcoin-cash-node-22.2.0-x86_64-linux-gnu.tar.gz
-    sha256: fdd9103698b87ab44b7e69e4033a0c9bc2afb2af10238f91dc5f42e4d6d26a72
-  23.0.0:
-    url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v23.0.0/bitcoin-cash-node-23.0.0-x86_64-linux-gnu.tar.gz
-    sha256: 474d53ba3dc10cee20da4c1e8d77e31a6b3c54c805f72eab7d705c9211c879bd
-  23.1.0:
-    url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v23.1.0/bitcoin-cash-node-23.1.0-x86_64-linux-gnu.tar.gz
-    sha256: 6a49e9079b90d5ad224fde38027b5365e908e1bf1f46b561fb5c27d4ab107a0c
   24.0.0:
     url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v24.0.0/bitcoin-cash-node-24.0.0-x86_64-linux-gnu.tar.gz
     sha256: 54ef3797a0cf3f0d0292e968d761b3480d15c9723954ce29b33ccbf5fa3ed4ff
 
 unlimited:
-  1.9.1.1:
-    url: https://www.bitcoinunlimited.info/downloads/bch-unlimited-1.9.1.1-linux64.tar.gz
-    sha256: 1f3a784a3422d882cafe862fb1e671cab551b93703ef69b2750e914fc0a60b4b
-    client_version: "v1.9.1.1-149dc0b57"
+  1.10.0.0:
+    url: https://www.bitcoinunlimited.info/downloads/bch-unlimited-1.10.0.0-linux64.tar.gz
+    sha256: 45ee6649dfe4fea90b46cbd83dc34ad61129a42d53bc5c1926dac6da52719ddf
+    client_version: "v1.10.0.0-653912375"
