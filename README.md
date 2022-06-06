@@ -116,7 +116,7 @@ Steps:
 
 #### bitcoin-deployment.yml
 ```
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: default
@@ -127,6 +127,9 @@ spec:
   strategy:
     type: Recreate
   replicas: 1
+  selector:
+    matchLabels:
+      service: bitcoin
   template:
     metadata:
       labels:
