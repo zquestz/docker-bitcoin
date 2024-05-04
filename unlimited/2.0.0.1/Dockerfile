@@ -7,9 +7,9 @@ RUN set -ex \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV BITCOIN_VERSION 2.0.0.0
-ENV BITCOIN_URL https://www.bitcoinunlimited.info/downloads/bch-unlimited-2.0.0.0-linux64.tar.gz
-ENV BITCOIN_SHA256 78994688dc8149dc69cbde085c068c42fc80d90b38e2e5988c23617581e341f2
+ENV BITCOIN_VERSION 2.0.0.1
+ENV BITCOIN_URL https://www.bitcoinunlimited.info/downloads/bch-unlimited-2.0.0.1-linux64.tar.gz
+ENV BITCOIN_SHA256 243b393dc79134b8595cab21faada21ee9b57461bede948a25823248208bb32e
 
 # install bitcoin binaries
 RUN set -ex \
