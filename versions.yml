@@ -5,6 +5,9 @@ node:
   27.0.0:
     url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v27.0.0/bitcoin-cash-node-27.0.0-x86_64-linux-gnu.tar.gz
     sha256: 2ab81515a763162435f7ea28bb1f10f69b6143f469278fc52c0b8cbaec6cf238
+  27.1.0:
+    url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v27.1.0/bitcoin-cash-node-27.1.0-x86_64-linux-gnu.tar.gz
+    sha256: 0dcc387cbaa3a039c97ddc8fb99c1fa7bff5dc6e4bd3a01d3c3095f595ad2dce
 
 unlimited:
   2.0.0.1:
