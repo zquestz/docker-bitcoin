@@ -31,11 +31,11 @@ def update_version(branch, version, opts={})
   opts['binary_tx'] ||= 'bitcoin-tx'
   opts['binary_test'] ||= 'test_bitcoin'
 
-  dockerfile = ERB.new(File.read('Dockerfile.erb'), nil, '-')
+  dockerfile = ERB.new(File.read('Dockerfile.erb'), trim_mode: '-')
   result = dockerfile.result(OpenStruct.new(opts).instance_eval { binding })
   File.write(File.join(dir, 'Dockerfile'), result)
 
-  docker_entrypoint = ERB.new(File.read('docker-entrypoint.sh.erb'), nil, '-')
+  docker_entrypoint = ERB.new(File.read('docker-entrypoint.sh.erb'), trim_mode: '-')
   result = docker_entrypoint.result(OpenStruct.new(opts).instance_eval { binding })
   File.write(File.join(dir, 'docker-entrypoint.sh'), result)
   run "chmod 755 #{File.join(dir, 'docker-entrypoint.sh')}"
