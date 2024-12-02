@@ -1,4 +1,4 @@
-language: bash
+language: ruby
 
 services: docker
 
