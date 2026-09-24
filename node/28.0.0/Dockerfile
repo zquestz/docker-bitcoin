@@ -10,10 +10,19 @@ RUN set -ex \
 ENV BITCOIN_VERSION=28.0.0
 ENV BITCOIN_URL=https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v28.0.0/bitcoin-cash-node-28.0.0-x86_64-linux-gnu.tar.gz
 ENV BITCOIN_SHA256=ba735cd3b70fab35ac1496e38596cec1f8d34989924376de001d4a86198f7158
+ENV BITCOIN_ARM64_URL=https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v28.0.0/bitcoin-cash-node-28.0.0-aarch64-linux-gnu.tar.gz
+ENV BITCOIN_ARM64_SHA256=226c1fa200136db34a26d17a65dda9ef9e18c306ad4fd7ae360253053eb3e334
+
+# set by buildx (and by BuildKit for the host platform)
+ARG TARGETARCH
 
 # install bitcoin binaries
 RUN set -ex \
 	&& cd /tmp \
+	&& if [ "$TARGETARCH" = "arm64" ]; then \
+		BITCOIN_URL="$BITCOIN_ARM64_URL"; \
+		BITCOIN_SHA256="$BITCOIN_ARM64_SHA256"; \
+	fi \
 	&& wget -qO bitcoin.tar.gz "$BITCOIN_URL" \
 	&& echo "$BITCOIN_SHA256 bitcoin.tar.gz" | sha256sum -c - \
 	&& tar -xzvf bitcoin.tar.gz -C /usr/local --strip-components=1 --exclude=*-qt \
