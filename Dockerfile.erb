@@ -10,6 +10,13 @@ RUN set -ex \
 ENV BITCOIN_VERSION=<%= version %>
 ENV BITCOIN_URL=<%= url %>
 ENV BITCOIN_SHA256=<%= sha256 %>
+<% if arm64_url -%>
+ENV BITCOIN_ARM64_URL=<%= arm64_url %>
+ENV BITCOIN_ARM64_SHA256=<%= arm64_sha256 %>
+
+# set by buildx (and by BuildKit for the host platform)
+ARG TARGETARCH
+<% end -%>
 <% if asc_url -%>
 ENV BITCOIN_ASC_URL=<%= asc_url %>
 ENV BITCOIN_PGP_KEY=<%= key %>
@@ -18,6 +25,12 @@ ENV BITCOIN_PGP_KEY=<%= key %>
 # install bitcoin binaries
 RUN set -ex \
 	&& cd /tmp \
+<% if arm64_url -%>
+	&& if [ "$TARGETARCH" = "arm64" ]; then \
+		BITCOIN_URL="$BITCOIN_ARM64_URL"; \
+		BITCOIN_SHA256="$BITCOIN_ARM64_SHA256"; \
+	fi \
+<% end -%>
 	&& wget -qO bitcoin.tar.gz "$BITCOIN_URL" \
 	&& echo "$BITCOIN_SHA256 bitcoin.tar.gz" | sha256sum -c - \
 <% if asc_url -%>

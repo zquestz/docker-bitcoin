@@ -205,6 +205,13 @@ Configuration files and code in this repository are distributed under the [MIT l
 All files are generated from templates in the root of this repository. Please do not edit any of the generated Dockerfiles directly.
 
 * To add a new version, update [versions.yml](/versions.yml), then run `make update`.
+* Bitcoin Cash Node versions also list `arm64_url` and `arm64_sha256` for the official `aarch64-linux-gnu` release, so their images can be built for both `linux/amd64` and `linux/arm64`.
 * To make a change to the Dockerfile which affects all current and historical versions, edit [Dockerfile.erb](/Dockerfile.erb) then run `make update`.
 
 If you would like to build and test containers for all versions (similar to what happens in CI), run `make`. If you would like to build and test all containers for a specific node, run `BRANCH=node make`.
+
+To publish a Bitcoin Cash Node version for both architectures in one tag, build it with buildx:
+
+```
+$ docker buildx build --platform linux/amd64,linux/arm64 -t zquestz/bitcoin-cash-node:29.1.0 --push node/29.1.0
+```
