@@ -29,6 +29,11 @@ node:
     sha256: 2d52f6c3091351095839415bfd9ad6ee5cdd34aa6c726f2078ae28aa9015acc4
     arm64_url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v29.1.0/bitcoin-cash-node-29.1.0-aarch64-linux-gnu.tar.gz
     arm64_sha256: 15c5c0400c828d6690970200ad59c18207313c7047b29d571f7e9870d06300ea
+  29.2.0:
+    url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v29.2.0/bitcoin-cash-node-29.2.0-x86_64-linux-gnu.tar.gz
+    sha256: 23bbe9ff749136a9b832a2a59023ce76a5391322c1ea2f4f24b5b91f035081bc
+    arm64_url: https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v29.2.0/bitcoin-cash-node-29.2.0-aarch64-linux-gnu.tar.gz
+    arm64_sha256: 27e177e5a07dc78c2c0d18798ea2e3925111955509ecdc476e828e7ce8f46383
 
 unlimited:
   2.0.0.1:

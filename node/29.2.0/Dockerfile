@@ -7,11 +7,11 @@ RUN set -ex \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget libatomic1 \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV BITCOIN_VERSION=27.1.0
-ENV BITCOIN_URL=https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v27.1.0/bitcoin-cash-node-27.1.0-x86_64-linux-gnu.tar.gz
-ENV BITCOIN_SHA256=0dcc387cbaa3a039c97ddc8fb99c1fa7bff5dc6e4bd3a01d3c3095f595ad2dce
-ENV BITCOIN_ARM64_URL=https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v27.1.0/bitcoin-cash-node-27.1.0-aarch64-linux-gnu.tar.gz
-ENV BITCOIN_ARM64_SHA256=e7996c776a5432df0455c2d33d7d8779624d11534ee84c8a668bc209f8c1713d
+ENV BITCOIN_VERSION=29.2.0
+ENV BITCOIN_URL=https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v29.2.0/bitcoin-cash-node-29.2.0-x86_64-linux-gnu.tar.gz
+ENV BITCOIN_SHA256=23bbe9ff749136a9b832a2a59023ce76a5391322c1ea2f4f24b5b91f035081bc
+ENV BITCOIN_ARM64_URL=https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v29.2.0/bitcoin-cash-node-29.2.0-aarch64-linux-gnu.tar.gz
+ENV BITCOIN_ARM64_SHA256=27e177e5a07dc78c2c0d18798ea2e3925111955509ecdc476e828e7ce8f46383
 
 # set by buildx (and by BuildKit for the host platform)
 ARG TARGETARCH
